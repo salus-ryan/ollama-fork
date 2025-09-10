@@ -1,0 +1,15 @@
+{
+  "timestamp": 1757528957.2515523,
+  "num_models": 2,
+  "total_triples": 778,
+  "avg_tokens_per_model": 388.0,
+  "braiding_strategies_tested": [
+    "entropy_weighted",
+    "orthogonal_covariance"
+  ],
+  "quality_metrics": {
+    "logit_diversity": 0.75,
+    "hidden_state_alignment": 0.68,
+    "fusion_coherence": 0.82
+  }
+}

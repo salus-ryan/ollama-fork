@@ -1,0 +1,52 @@
+{"metadata": {"session_id": "capture_1757528914", "model": "llama3.2:1b", "prompt": "Explain quantum computing in simple terms", "hidden_config": {"layers": [-1], "compression": "float16", "max_sequence_length": 2048, "max_batch_size": 1, "enable_streaming": true, "memory_limit_mb": null}, "enable_logits": true, "max_tokens": 50, "start_time": 1757528914.6750104, "triples_captured": 0, "total_tokens": 0, "file_size_mb": 0.0}}
+{"timestamp": 1757528915.7970128, "token": "Quant", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 0, "is_final": false}
+{"timestamp": 1757528915.8324864, "token": "um", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 1, "is_final": false}
+{"timestamp": 1757528915.8656468, "token": " computing", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 2, "is_final": false}
+{"timestamp": 1757528915.8994548, "token": " is", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 3, "is_final": false}
+{"timestamp": 1757528915.9323914, "token": " a", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 4, "is_final": false}
+{"timestamp": 1757528915.9658704, "token": " way", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 5, "is_final": false}
+{"timestamp": 1757528916.000166, "token": " of", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 6, "is_final": false}
+{"timestamp": 1757528916.0320249, "token": " processing", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 7, "is_final": false}
+{"timestamp": 1757528916.0655558, "token": " information", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 8, "is_final": false}
+{"timestamp": 1757528916.098791, "token": " that", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 9, "is_final": false}
+{"timestamp": 1757528916.1340523, "token": "'s", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 10, "is_final": false}
+{"timestamp": 1757528916.1662703, "token": " different", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 11, "is_final": false}
+{"timestamp": 1757528916.200173, "token": " from", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 12, "is_final": false}
+{"timestamp": 1757528916.232705, "token": " regular", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 13, "is_final": false}
+{"timestamp": 1757528916.2702117, "token": " computers", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 14, "is_final": false}
+{"timestamp": 1757528916.303351, "token": ".", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 15, "is_final": false}
+{"timestamp": 1757528916.332918, "token": " Here", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 16, "is_final": false}
+{"timestamp": 1757528916.3667657, "token": "'s", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 17, "is_final": false}
+{"timestamp": 1757528916.400193, "token": " how", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 18, "is_final": false}
+{"timestamp": 1757528916.4333518, "token": " it", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 19, "is_final": false}
+{"timestamp": 1757528916.4637647, "token": " works", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 20, "is_final": false}
+{"timestamp": 1757528916.4968932, "token": " in", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 21, "is_final": false}
+{"timestamp": 1757528916.5296788, "token": " simple", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 22, "is_final": false}
+{"timestamp": 1757528916.5732162, "token": " terms", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 23, "is_final": false}
+{"timestamp": 1757528916.6187248, "token": ":\n\n", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 24, "is_final": false}
+{"timestamp": 1757528916.6542485, "token": "**", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 25, "is_final": false}
+{"timestamp": 1757528916.6957507, "token": "Regular", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 26, "is_final": false}
+{"timestamp": 1757528916.7348237, "token": " Computers", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 27, "is_final": false}
+{"timestamp": 1757528916.7696605, "token": ":", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 28, "is_final": false}
+{"timestamp": 1757528916.8062446, "token": "**\n\n", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 29, "is_final": false}
+{"timestamp": 1757528916.842892, "token": "A", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 30, "is_final": false}
+{"timestamp": 1757528916.8769338, "token": " regular", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 31, "is_final": false}
+{"timestamp": 1757528916.9116848, "token": " computer", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 32, "is_final": false}
+{"timestamp": 1757528916.9460182, "token": " uses", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 33, "is_final": false}
+{"timestamp": 1757528916.9803205, "token": " \"", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 34, "is_final": false}
+{"timestamp": 1757528917.0147965, "token": "bits", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 35, "is_final": false}
+{"timestamp": 1757528917.048382, "token": "\"", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 36, "is_final": false}
+{"timestamp": 1757528917.0824606, "token": " to", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 37, "is_final": false}
+{"timestamp": 1757528917.116227, "token": " store", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 38, "is_final": false}
+{"timestamp": 1757528917.1500244, "token": " and", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 39, "is_final": false}
+{"timestamp": 1757528917.1846328, "token": " process", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 40, "is_final": false}
+{"timestamp": 1757528917.2178261, "token": " information", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 41, "is_final": false}
+{"timestamp": 1757528917.2517226, "token": ".", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 42, "is_final": false}
+{"timestamp": 1757528917.2838666, "token": " A", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 43, "is_final": false}
+{"timestamp": 1757528917.3203244, "token": " bit", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 44, "is_final": false}
+{"timestamp": 1757528917.3568435, "token": " can", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 45, "is_final": false}
+{"timestamp": 1757528917.3904788, "token": " be", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 46, "is_final": false}
+{"timestamp": 1757528917.4264743, "token": " either", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 47, "is_final": false}
+{"timestamp": 1757528917.4609802, "token": " ", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 48, "is_final": false}
+{"timestamp": 1757528917.4936664, "token": "0", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 49, "is_final": false}
+{"timestamp": 1757528917.4938827, "token": "", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 50, "is_final": true}

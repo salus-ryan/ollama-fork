@@ -39,6 +39,41 @@ func (e StatusError) Error() string {
 // ImageData represents the raw binary data of an image file.
 type ImageData []byte
 
+// HiddenStateConfig configures which hidden states to expose during generation.
+type HiddenStateConfig struct {
+	// Enabled controls whether hidden state capture is active.
+	Enabled bool `json:"enabled"`
+	
+	// Layers specifies which layers to capture. If empty, captures all layers.
+	// Can specify ranges like "0-5" or individual layers like "0,2,4".
+	Layers []int `json:"layers,omitempty"`
+	
+	// LastLayerOnly captures only the final transformer layer output.
+	LastLayerOnly bool `json:"last_layer_only,omitempty"`
+	
+	// Compression controls the data format for hidden states.
+	// Options: "none", "float16", "int8"
+	Compression string `json:"compression,omitempty"`
+}
+
+// HiddenState represents the activation tensor from a transformer layer.
+type HiddenState struct {
+	// Layer is the transformer layer index (0-based).
+	Layer int `json:"layer"`
+	
+	// Shape describes the tensor dimensions [batch_size, seq_len, hidden_size].
+	Shape []int `json:"shape"`
+	
+	// Data contains the flattened tensor values.
+	Data []float32 `json:"data"`
+	
+	// TokenIndex is the position in the sequence this activation corresponds to.
+	TokenIndex int `json:"token_index"`
+	
+	// Compression indicates the data format used.
+	Compression string `json:"compression,omitempty"`
+}
+
 // GenerateRequest describes a request sent by [Client.Generate]. While you
 // have to specify the Model and Prompt fields, all the other fields have
 // reasonable defaults for basic uses.
@@ -94,6 +129,10 @@ type GenerateRequest struct {
 	// DebugRenderOnly is a debug option that, when set to true, returns the rendered
 	// template instead of calling the model.
 	DebugRenderOnly bool `json:"_debug_render_only,omitempty"`
+
+	// ExposeHidden controls whether to expose transformer hidden states during generation.
+	// When enabled, the response will include hidden_states field with layer activations.
+	ExposeHidden *HiddenStateConfig `json:"expose_hidden,omitempty"`
 }
 
 // ChatRequest describes a request sent by [Client.Chat].
@@ -128,6 +167,10 @@ type ChatRequest struct {
 	// DebugRenderOnly is a debug option that, when set to true, returns the rendered
 	// template instead of calling the model.
 	DebugRenderOnly bool `json:"_debug_render_only,omitempty"`
+
+	// ExposeHidden controls whether to expose transformer hidden states during generation.
+	// When enabled, the response will include hidden_states field with layer activations.
+	ExposeHidden *HiddenStateConfig `json:"expose_hidden,omitempty"`
 }
 
 type Tools []Tool
@@ -321,6 +364,10 @@ type ChatResponse struct {
 	Done bool `json:"done"`
 
 	Metrics
+
+	// HiddenStates contains transformer layer activations when ExposeHidden is enabled.
+	// Each element represents the hidden state for one layer, with shape metadata.
+	HiddenStates []HiddenState `json:"hidden_states,omitempty"`
 }
 
 // DebugInfo contains debug information for template rendering
@@ -588,6 +635,10 @@ type GenerateResponse struct {
 	Metrics
 
 	ToolCalls []ToolCall `json:"tool_calls,omitempty"`
+
+	// HiddenStates contains transformer layer activations when ExposeHidden is enabled.
+	// Each element represents the hidden state for one layer, with shape metadata.
+	HiddenStates []HiddenState `json:"hidden_states,omitempty"`
 }
 
 // ModelDetails provides details about a model.

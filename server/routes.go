@@ -343,19 +343,21 @@ func (s *Server) GenerateHandler(c *gin.Context) {
 		var sb strings.Builder
 		defer close(ch)
 		if err := r.Completion(c.Request.Context(), llm.CompletionRequest{
-			Prompt:     prompt,
-			Images:     images,
-			Format:     req.Format,
-			Options:    opts,
-			UseHarmony: useHarmony,
+			Prompt:       prompt,
+			Images:       images,
+			Format:       req.Format,
+			Options:      opts,
+			UseHarmony:   useHarmony,
+			ExposeHidden: req.ExposeHidden,
 		}, func(cr llm.CompletionResponse) {
 			res := api.GenerateResponse{
-				Model:     req.Model,
-				CreatedAt: time.Now().UTC(),
-				Response:  cr.Content,
-				Done:      cr.Done,
-				Thinking:  cr.Thinking,
-				ToolCalls: cr.ToolCalls,
+				Model:        req.Model,
+				CreatedAt:    time.Now().UTC(),
+				Response:     cr.Content,
+				Done:         cr.Done,
+				Thinking:     cr.Thinking,
+				ToolCalls:    cr.ToolCalls,
+				HiddenStates: cr.HiddenStates,
 				Metrics: api.Metrics{
 					PromptEvalCount:    cr.PromptEvalCount,
 					PromptEvalDuration: cr.PromptEvalDuration,
@@ -1664,12 +1666,14 @@ func (s *Server) ChatHandler(c *gin.Context) {
 			Options:       opts,
 			UseHarmony:    useHarmony,
 			PrefillString: prefillString,
+			ExposeHidden:  req.ExposeHidden,
 		}, func(r llm.CompletionResponse) {
 			res := api.ChatResponse{
-				Model:     req.Model,
-				CreatedAt: time.Now().UTC(),
-				Message:   api.Message{Role: "assistant", Content: r.Content, Thinking: r.Thinking, ToolCalls: r.ToolCalls},
-				Done:      r.Done,
+				Model:        req.Model,
+				CreatedAt:    time.Now().UTC(),
+				Message:      api.Message{Role: "assistant", Content: r.Content, Thinking: r.Thinking, ToolCalls: r.ToolCalls},
+				Done:         r.Done,
+				HiddenStates: r.HiddenStates,
 				Metrics: api.Metrics{
 					PromptEvalCount:    r.PromptEvalCount,
 					PromptEvalDuration: r.PromptEvalDuration,

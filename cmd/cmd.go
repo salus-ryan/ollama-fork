@@ -991,6 +991,7 @@ type runOptions struct {
 	KeepAlive    *api.Duration
 	Think        *api.ThinkValue
 	HideThinking bool
+	ExposeHidden *api.HiddenStateConfig
 }
 
 type displayResponseState struct {
@@ -1282,15 +1283,16 @@ func generate(cmd *cobra.Command, opts runOptions) error {
 	}
 
 	request := api.GenerateRequest{
-		Model:     opts.Model,
-		Prompt:    opts.Prompt,
-		Context:   generateContext,
-		Images:    opts.Images,
-		Format:    json.RawMessage(opts.Format),
-		System:    opts.System,
-		Options:   opts.Options,
-		KeepAlive: opts.KeepAlive,
-		Think:     opts.Think,
+		Model:        opts.Model,
+		Prompt:       opts.Prompt,
+		Context:      generateContext,
+		Images:       opts.Images,
+		Format:       json.RawMessage(opts.Format),
+		System:       opts.System,
+		Options:      opts.Options,
+		KeepAlive:    opts.KeepAlive,
+		Think:        opts.Think,
+		ExposeHidden: opts.ExposeHidden,
 	}
 
 	if err := client.Generate(ctx, &request, fn); err != nil {

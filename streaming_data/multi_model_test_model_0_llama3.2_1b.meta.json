@@ -1,0 +1,23 @@
+{
+  "session_id": "capture_1757528936",
+  "model": "llama3.2:1b",
+  "prompt": "What is machine learning?",
+  "hidden_config": {
+    "layers": [
+      -1
+    ],
+    "compression": "float16",
+    "max_sequence_length": 2048,
+    "max_batch_size": 1,
+    "enable_streaming": true,
+    "memory_limit_mb": null
+  },
+  "enable_logits": true,
+  "max_tokens": 500,
+  "start_time": 1757528936.574761,
+  "triples_captured": 501,
+  "total_tokens": 500,
+  "file_size_mb": 0.07378101348876953,
+  "end_time": 1757528957.2511685,
+  "duration_seconds": 20.6764075756073
+}

@@ -1352,6 +1352,9 @@ type CompletionRequest struct {
 	Grammar       string // set before sending the request to the subprocess
 	UseHarmony    bool
 	PrefillString string
+	
+	// ExposeHidden controls whether to capture and return hidden states
+	ExposeHidden *api.HiddenStateConfig
 }
 
 // DoneReason represents the reason why a completion response is done
@@ -1391,6 +1394,9 @@ type CompletionResponse struct {
 	PromptEvalDuration time.Duration  `json:"prompt_eval_duration"`
 	EvalCount          int            `json:"eval_count"`
 	EvalDuration       time.Duration  `json:"eval_duration"`
+	
+	// HiddenStates contains transformer layer activations when ExposeHidden is enabled
+	HiddenStates       []api.HiddenState `json:"hidden_states,omitempty"`
 }
 
 func (s *llmServer) Completion(ctx context.Context, req CompletionRequest, fn func(CompletionResponse)) error {

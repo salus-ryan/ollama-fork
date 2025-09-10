@@ -1,0 +1,157 @@
+{
+  "model": "llama3.2:3b",
+  "timestamp": 1757528818.8022015,
+  "prompts": {
+    "prompt_0": {
+      "concurrency": {
+        "sequential_time": 0.2449333667755127,
+        "concurrent_time": 0.0976712703704834,
+        "speedup_ratio": 2.507731965054203,
+        "sequential_throughput": 0.0,
+        "concurrent_throughput": 0.0,
+        "throughput_scaling": 0
+      },
+      "no_hidden": "BenchmarkResult(tokens_per_second=0.0, memory_peak_mb=158.93359375, memory_overhead_mb=0.0, compression_ratio=1.0, quality_score=None, hidden_state_size_mb=0, vram_peak_mb=17.0, vram_overhead_mb=0.0, tensor_elements=0, actual_tensor_bytes=0)",
+      "last_layer": {
+        "baseline": "BenchmarkResult(tokens_per_second=0.0, memory_peak_mb=158.93359375, memory_overhead_mb=0.0, compression_ratio=1.0, quality_score=None, hidden_state_size_mb=0, vram_peak_mb=17.0, vram_overhead_mb=0.0, tensor_elements=0, actual_tensor_bytes=0)",
+        "none": "BenchmarkResult(tokens_per_second=0.0, memory_peak_mb=158.93359375, memory_overhead_mb=0.0, compression_ratio=1.0, quality_score=None, hidden_state_size_mb=0, vram_peak_mb=17.0, vram_overhead_mb=0.0, tensor_elements=0, actual_tensor_bytes=0)",
+        "float16": "BenchmarkResult(tokens_per_second=0.0, memory_peak_mb=158.93359375, memory_overhead_mb=0.0, compression_ratio=1.0, quality_score=None, hidden_state_size_mb=0, vram_peak_mb=17.0, vram_overhead_mb=0.0, tensor_elements=0, actual_tensor_bytes=0)",
+        "int8": "BenchmarkResult(tokens_per_second=0.0, memory_peak_mb=158.93359375, memory_overhead_mb=0.0, compression_ratio=1.0, quality_score=None, hidden_state_size_mb=0, vram_peak_mb=17.0, vram_overhead_mb=0.0, tensor_elements=0, actual_tensor_bytes=0)"
+      },
+      "last_3_layers": {
+        "baseline": "BenchmarkResult(tokens_per_second=0.0, memory_peak_mb=158.93359375, memory_overhead_mb=0.0, compression_ratio=1.0, quality_score=None, hidden_state_size_mb=0, vram_peak_mb=17.0, vram_overhead_mb=0.0, tensor_elements=0, actual_tensor_bytes=0)",
+        "none": "BenchmarkResult(tokens_per_second=0.0, memory_peak_mb=158.93359375, memory_overhead_mb=0.0, compression_ratio=1.0, quality_score=None, hidden_state_size_mb=0, vram_peak_mb=17.0, vram_overhead_mb=0.0, tensor_elements=0, actual_tensor_bytes=0)",
+        "float16": "BenchmarkResult(tokens_per_second=0.0, memory_peak_mb=158.93359375, memory_overhead_mb=0.0, compression_ratio=1.0, quality_score=None, hidden_state_size_mb=0, vram_peak_mb=17.0, vram_overhead_mb=0.0, tensor_elements=0, actual_tensor_bytes=0)",
+        "int8": "BenchmarkResult(tokens_per_second=0.0, memory_peak_mb=158.93359375, memory_overhead_mb=0.0, compression_ratio=1.0, quality_score=None, hidden_state_size_mb=0, vram_peak_mb=17.0, vram_overhead_mb=0.0, tensor_elements=0, actual_tensor_bytes=0)"
+      },
+      "layers_24_to_31": {
+        "baseline": "BenchmarkResult(tokens_per_second=0.0, memory_peak_mb=158.93359375, memory_overhead_mb=0.0, compression_ratio=1.0, quality_score=None, hidden_state_size_mb=0, vram_peak_mb=17.0, vram_overhead_mb=0.0, tensor_elements=0, actual_tensor_bytes=0)",
+        "none": "BenchmarkResult(tokens_per_second=0.0, memory_peak_mb=158.93359375, memory_overhead_mb=0.0, compression_ratio=1.0, quality_score=None, hidden_state_size_mb=0, vram_peak_mb=17.0, vram_overhead_mb=0.0, tensor_elements=0, actual_tensor_bytes=0)",
+        "float16": "BenchmarkResult(tokens_per_second=0.0, memory_peak_mb=158.93359375, memory_overhead_mb=0.0, compression_ratio=1.0, quality_score=None, hidden_state_size_mb=0, vram_peak_mb=17.0, vram_overhead_mb=0.0, tensor_elements=0, actual_tensor_bytes=0)",
+        "int8": "BenchmarkResult(tokens_per_second=0.0, memory_peak_mb=158.93359375, memory_overhead_mb=0.0, compression_ratio=1.0, quality_score=None, hidden_state_size_mb=0, vram_peak_mb=17.0, vram_overhead_mb=0.0, tensor_elements=0, actual_tensor_bytes=0)"
+      }
+    },
+    "prompt_1": {
+      "concurrency": {
+        "sequential_time": 0.20723628997802734,
+        "concurrent_time": 0.05977606773376465,
+        "speedup_ratio": 3.4668772609973715,
+        "sequential_throughput": 0.0,
+        "concurrent_throughput": 0.0,
+        "throughput_scaling": 0
+      },
+      "no_hidden": "BenchmarkResult(tokens_per_second=0.0, memory_peak_mb=158.93359375, memory_overhead_mb=0.0, compression_ratio=1.0, quality_score=None, hidden_state_size_mb=0, vram_peak_mb=17.0, vram_overhead_mb=0.0, tensor_elements=0, actual_tensor_bytes=0)",
+      "last_layer": {
+        "baseline": "BenchmarkResult(tokens_per_second=0.0, memory_peak_mb=158.93359375, memory_overhead_mb=0.0, compression_ratio=1.0, quality_score=None, hidden_state_size_mb=0, vram_peak_mb=17.0, vram_overhead_mb=0.0, tensor_elements=0, actual_tensor_bytes=0)",
+        "none": "BenchmarkResult(tokens_per_second=0.0, memory_peak_mb=158.93359375, memory_overhead_mb=0.0, compression_ratio=1.0, quality_score=None, hidden_state_size_mb=0, vram_peak_mb=17.0, vram_overhead_mb=0.0, tensor_elements=0, actual_tensor_bytes=0)",
+        "float16": "BenchmarkResult(tokens_per_second=0.0, memory_peak_mb=158.93359375, memory_overhead_mb=0.0, compression_ratio=1.0, quality_score=None, hidden_state_size_mb=0, vram_peak_mb=17.0, vram_overhead_mb=0.0, tensor_elements=0, actual_tensor_bytes=0)",
+        "int8": "BenchmarkResult(tokens_per_second=0.0, memory_peak_mb=158.93359375, memory_overhead_mb=0.0, compression_ratio=1.0, quality_score=None, hidden_state_size_mb=0, vram_peak_mb=17.0, vram_overhead_mb=0.0, tensor_elements=0, actual_tensor_bytes=0)"
+      },
+      "last_3_layers": {
+        "baseline": "BenchmarkResult(tokens_per_second=0.0, memory_peak_mb=158.93359375, memory_overhead_mb=0.0, compression_ratio=1.0, quality_score=None, hidden_state_size_mb=0, vram_peak_mb=17.0, vram_overhead_mb=0.0, tensor_elements=0, actual_tensor_bytes=0)",
+        "none": "BenchmarkResult(tokens_per_second=0.0, memory_peak_mb=158.93359375, memory_overhead_mb=0.0, compression_ratio=1.0, quality_score=None, hidden_state_size_mb=0, vram_peak_mb=17.0, vram_overhead_mb=0.0, tensor_elements=0, actual_tensor_bytes=0)",
+        "float16": "BenchmarkResult(tokens_per_second=0.0, memory_peak_mb=158.93359375, memory_overhead_mb=0.0, compression_ratio=1.0, quality_score=None, hidden_state_size_mb=0, vram_peak_mb=17.0, vram_overhead_mb=0.0, tensor_elements=0, actual_tensor_bytes=0)",
+        "int8": "BenchmarkResult(tokens_per_second=0.0, memory_peak_mb=158.93359375, memory_overhead_mb=0.0, compression_ratio=1.0, quality_score=None, hidden_state_size_mb=0, vram_peak_mb=17.0, vram_overhead_mb=0.0, tensor_elements=0, actual_tensor_bytes=0)"
+      },
+      "layers_24_to_31": {
+        "baseline": "BenchmarkResult(tokens_per_second=0.0, memory_peak_mb=158.93359375, memory_overhead_mb=0.0, compression_ratio=1.0, quality_score=None, hidden_state_size_mb=0, vram_peak_mb=17.0, vram_overhead_mb=0.0, tensor_elements=0, actual_tensor_bytes=0)",
+        "none": "BenchmarkResult(tokens_per_second=0.0, memory_peak_mb=158.93359375, memory_overhead_mb=0.0, compression_ratio=1.0, quality_score=None, hidden_state_size_mb=0, vram_peak_mb=17.0, vram_overhead_mb=0.0, tensor_elements=0, actual_tensor_bytes=0)",
+        "float16": "BenchmarkResult(tokens_per_second=0.0, memory_peak_mb=158.93359375, memory_overhead_mb=0.0, compression_ratio=1.0, quality_score=None, hidden_state_size_mb=0, vram_peak_mb=17.0, vram_overhead_mb=0.0, tensor_elements=0, actual_tensor_bytes=0)",
+        "int8": "BenchmarkResult(tokens_per_second=0.0, memory_peak_mb=158.93359375, memory_overhead_mb=0.0, compression_ratio=1.0, quality_score=None, hidden_state_size_mb=0, vram_peak_mb=17.0, vram_overhead_mb=0.0, tensor_elements=0, actual_tensor_bytes=0)"
+      }
+    },
+    "prompt_2": {
+      "concurrency": {
+        "sequential_time": 0.23196101188659668,
+        "concurrent_time": 0.07470917701721191,
+        "speedup_ratio": 3.104852993269571,
+        "sequential_throughput": 0.0,
+        "concurrent_throughput": 0.0,
+        "throughput_scaling": 0
+      },
+      "no_hidden": "BenchmarkResult(tokens_per_second=0.0, memory_peak_mb=158.93359375, memory_overhead_mb=0.0, compression_ratio=1.0, quality_score=None, hidden_state_size_mb=0, vram_peak_mb=17.0, vram_overhead_mb=0.0, tensor_elements=0, actual_tensor_bytes=0)",
+      "last_layer": {
+        "baseline": "BenchmarkResult(tokens_per_second=0.0, memory_peak_mb=158.93359375, memory_overhead_mb=0.0, compression_ratio=1.0, quality_score=None, hidden_state_size_mb=0, vram_peak_mb=17.0, vram_overhead_mb=0.0, tensor_elements=0, actual_tensor_bytes=0)",
+        "none": "BenchmarkResult(tokens_per_second=0.0, memory_peak_mb=158.93359375, memory_overhead_mb=0.0, compression_ratio=1.0, quality_score=None, hidden_state_size_mb=0, vram_peak_mb=17.0, vram_overhead_mb=0.0, tensor_elements=0, actual_tensor_bytes=0)",
+        "float16": "BenchmarkResult(tokens_per_second=0.0, memory_peak_mb=158.93359375, memory_overhead_mb=0.0, compression_ratio=1.0, quality_score=None, hidden_state_size_mb=0, vram_peak_mb=17.0, vram_overhead_mb=0.0, tensor_elements=0, actual_tensor_bytes=0)",
+        "int8": "BenchmarkResult(tokens_per_second=0.0, memory_peak_mb=158.93359375, memory_overhead_mb=0.0, compression_ratio=1.0, quality_score=None, hidden_state_size_mb=0, vram_peak_mb=17.0, vram_overhead_mb=0.0, tensor_elements=0, actual_tensor_bytes=0)"
+      },
+      "last_3_layers": {
+        "baseline": "BenchmarkResult(tokens_per_second=0.0, memory_peak_mb=158.93359375, memory_overhead_mb=0.0, compression_ratio=1.0, quality_score=None, hidden_state_size_mb=0, vram_peak_mb=17.0, vram_overhead_mb=0.0, tensor_elements=0, actual_tensor_bytes=0)",
+        "none": "BenchmarkResult(tokens_per_second=0.0, memory_peak_mb=158.93359375, memory_overhead_mb=0.0, compression_ratio=1.0, quality_score=None, hidden_state_size_mb=0, vram_peak_mb=17.0, vram_overhead_mb=0.0, tensor_elements=0, actual_tensor_bytes=0)",
+        "float16": "BenchmarkResult(tokens_per_second=0.0, memory_peak_mb=158.93359375, memory_overhead_mb=0.0, compression_ratio=1.0, quality_score=None, hidden_state_size_mb=0, vram_peak_mb=17.0, vram_overhead_mb=0.0, tensor_elements=0, actual_tensor_bytes=0)",
+        "int8": "BenchmarkResult(tokens_per_second=0.0, memory_peak_mb=158.93359375, memory_overhead_mb=0.0, compression_ratio=1.0, quality_score=None, hidden_state_size_mb=0, vram_peak_mb=17.0, vram_overhead_mb=0.0, tensor_elements=0, actual_tensor_bytes=0)"
+      },
+      "layers_24_to_31": {
+        "baseline": "BenchmarkResult(tokens_per_second=0.0, memory_peak_mb=158.93359375, memory_overhead_mb=0.0, compression_ratio=1.0, quality_score=None, hidden_state_size_mb=0, vram_peak_mb=17.0, vram_overhead_mb=0.0, tensor_elements=0, actual_tensor_bytes=0)",
+        "none": "BenchmarkResult(tokens_per_second=0.0, memory_peak_mb=158.93359375, memory_overhead_mb=0.0, compression_ratio=1.0, quality_score=None, hidden_state_size_mb=0, vram_peak_mb=17.0, vram_overhead_mb=0.0, tensor_elements=0, actual_tensor_bytes=0)",
+        "float16": "BenchmarkResult(tokens_per_second=0.0, memory_peak_mb=158.93359375, memory_overhead_mb=0.0, compression_ratio=1.0, quality_score=None, hidden_state_size_mb=0, vram_peak_mb=17.0, vram_overhead_mb=0.0, tensor_elements=0, actual_tensor_bytes=0)",
+        "int8": "BenchmarkResult(tokens_per_second=0.0, memory_peak_mb=158.93359375, memory_overhead_mb=0.0, compression_ratio=1.0, quality_score=None, hidden_state_size_mb=0, vram_peak_mb=17.0, vram_overhead_mb=0.0, tensor_elements=0, actual_tensor_bytes=0)"
+      }
+    },
+    "prompt_3": {
+      "concurrency": {
+        "sequential_time": 0.2581312656402588,
+        "concurrent_time": 0.07920098304748535,
+        "speedup_ratio": 3.2591926982206125,
+        "sequential_throughput": 0.0,
+        "concurrent_throughput": 0.0,
+        "throughput_scaling": 0
+      },
+      "no_hidden": "BenchmarkResult(tokens_per_second=0.0, memory_peak_mb=158.93359375, memory_overhead_mb=0.0, compression_ratio=1.0, quality_score=None, hidden_state_size_mb=0, vram_peak_mb=17.0, vram_overhead_mb=0.0, tensor_elements=0, actual_tensor_bytes=0)",
+      "last_layer": {
+        "baseline": "BenchmarkResult(tokens_per_second=0.0, memory_peak_mb=158.93359375, memory_overhead_mb=0.0, compression_ratio=1.0, quality_score=None, hidden_state_size_mb=0, vram_peak_mb=17.0, vram_overhead_mb=0.0, tensor_elements=0, actual_tensor_bytes=0)",
+        "none": "BenchmarkResult(tokens_per_second=0.0, memory_peak_mb=158.93359375, memory_overhead_mb=0.0, compression_ratio=1.0, quality_score=None, hidden_state_size_mb=0, vram_peak_mb=17.0, vram_overhead_mb=0.0, tensor_elements=0, actual_tensor_bytes=0)",
+        "float16": "BenchmarkResult(tokens_per_second=0.0, memory_peak_mb=158.93359375, memory_overhead_mb=0.0, compression_ratio=1.0, quality_score=None, hidden_state_size_mb=0, vram_peak_mb=17.0, vram_overhead_mb=0.0, tensor_elements=0, actual_tensor_bytes=0)",
+        "int8": "BenchmarkResult(tokens_per_second=0.0, memory_peak_mb=158.93359375, memory_overhead_mb=0.0, compression_ratio=1.0, quality_score=None, hidden_state_size_mb=0, vram_peak_mb=17.0, vram_overhead_mb=0.0, tensor_elements=0, actual_tensor_bytes=0)"
+      },
+      "last_3_layers": {
+        "baseline": "BenchmarkResult(tokens_per_second=0.0, memory_peak_mb=158.93359375, memory_overhead_mb=0.0, compression_ratio=1.0, quality_score=None, hidden_state_size_mb=0, vram_peak_mb=17.0, vram_overhead_mb=0.0, tensor_elements=0, actual_tensor_bytes=0)",
+        "none": "BenchmarkResult(tokens_per_second=0.0, memory_peak_mb=158.93359375, memory_overhead_mb=0.0, compression_ratio=1.0, quality_score=None, hidden_state_size_mb=0, vram_peak_mb=17.0, vram_overhead_mb=0.0, tensor_elements=0, actual_tensor_bytes=0)",
+        "float16": "BenchmarkResult(tokens_per_second=0.0, memory_peak_mb=158.93359375, memory_overhead_mb=0.0, compression_ratio=1.0, quality_score=None, hidden_state_size_mb=0, vram_peak_mb=17.0, vram_overhead_mb=0.0, tensor_elements=0, actual_tensor_bytes=0)",
+        "int8": "BenchmarkResult(tokens_per_second=0.0, memory_peak_mb=158.93359375, memory_overhead_mb=0.0, compression_ratio=1.0, quality_score=None, hidden_state_size_mb=0, vram_peak_mb=17.0, vram_overhead_mb=0.0, tensor_elements=0, actual_tensor_bytes=0)"
+      },
+      "layers_24_to_31": {
+        "baseline": "BenchmarkResult(tokens_per_second=0.0, memory_peak_mb=158.93359375, memory_overhead_mb=0.0, compression_ratio=1.0, quality_score=None, hidden_state_size_mb=0, vram_peak_mb=17.0, vram_overhead_mb=0.0, tensor_elements=0, actual_tensor_bytes=0)",
+        "none": "BenchmarkResult(tokens_per_second=0.0, memory_peak_mb=158.93359375, memory_overhead_mb=0.0, compression_ratio=1.0, quality_score=None, hidden_state_size_mb=0, vram_peak_mb=17.0, vram_overhead_mb=0.0, tensor_elements=0, actual_tensor_bytes=0)",
+        "float16": "BenchmarkResult(tokens_per_second=0.0, memory_peak_mb=158.93359375, memory_overhead_mb=0.0, compression_ratio=1.0, quality_score=None, hidden_state_size_mb=0, vram_peak_mb=17.0, vram_overhead_mb=0.0, tensor_elements=0, actual_tensor_bytes=0)",
+        "int8": "BenchmarkResult(tokens_per_second=0.0, memory_peak_mb=158.93359375, memory_overhead_mb=0.0, compression_ratio=1.0, quality_score=None, hidden_state_size_mb=0, vram_peak_mb=17.0, vram_overhead_mb=0.0, tensor_elements=0, actual_tensor_bytes=0)"
+      }
+    },
+    "prompt_4": {
+      "concurrency": {
+        "sequential_time": 0.2531273365020752,
+        "concurrent_time": 0.06509709358215332,
+        "speedup_ratio": 3.8884583408109523,
+        "sequential_throughput": 0.0,
+        "concurrent_throughput": 0.0,
+        "throughput_scaling": 0
+      },
+      "no_hidden": "BenchmarkResult(tokens_per_second=0.0, memory_peak_mb=158.93359375, memory_overhead_mb=0.0, compression_ratio=1.0, quality_score=None, hidden_state_size_mb=0, vram_peak_mb=17.0, vram_overhead_mb=0.0, tensor_elements=0, actual_tensor_bytes=0)",
+      "last_layer": {
+        "baseline": "BenchmarkResult(tokens_per_second=0.0, memory_peak_mb=158.93359375, memory_overhead_mb=0.0, compression_ratio=1.0, quality_score=None, hidden_state_size_mb=0, vram_peak_mb=17.0, vram_overhead_mb=0.0, tensor_elements=0, actual_tensor_bytes=0)",
+        "none": "BenchmarkResult(tokens_per_second=0.0, memory_peak_mb=158.93359375, memory_overhead_mb=0.0, compression_ratio=1.0, quality_score=None, hidden_state_size_mb=0, vram_peak_mb=17.0, vram_overhead_mb=0.0, tensor_elements=0, actual_tensor_bytes=0)",
+        "float16": "BenchmarkResult(tokens_per_second=0.0, memory_peak_mb=158.93359375, memory_overhead_mb=0.0, compression_ratio=1.0, quality_score=None, hidden_state_size_mb=0, vram_peak_mb=17.0, vram_overhead_mb=0.0, tensor_elements=0, actual_tensor_bytes=0)",
+        "int8": "BenchmarkResult(tokens_per_second=0.0, memory_peak_mb=158.93359375, memory_overhead_mb=0.0, compression_ratio=1.0, quality_score=None, hidden_state_size_mb=0, vram_peak_mb=17.0, vram_overhead_mb=0.0, tensor_elements=0, actual_tensor_bytes=0)"
+      },
+      "last_3_layers": {
+        "baseline": "BenchmarkResult(tokens_per_second=0.0, memory_peak_mb=158.93359375, memory_overhead_mb=0.0, compression_ratio=1.0, quality_score=None, hidden_state_size_mb=0, vram_peak_mb=17.0, vram_overhead_mb=0.0, tensor_elements=0, actual_tensor_bytes=0)",
+        "none": "BenchmarkResult(tokens_per_second=0.0, memory_peak_mb=158.93359375, memory_overhead_mb=0.0, compression_ratio=1.0, quality_score=None, hidden_state_size_mb=0, vram_peak_mb=17.0, vram_overhead_mb=0.0, tensor_elements=0, actual_tensor_bytes=0)",
+        "float16": "BenchmarkResult(tokens_per_second=0.0, memory_peak_mb=158.93359375, memory_overhead_mb=0.0, compression_ratio=1.0, quality_score=None, hidden_state_size_mb=0, vram_peak_mb=17.0, vram_overhead_mb=0.0, tensor_elements=0, actual_tensor_bytes=0)",
+        "int8": "BenchmarkResult(tokens_per_second=0.0, memory_peak_mb=158.93359375, memory_overhead_mb=0.0, compression_ratio=1.0, quality_score=None, hidden_state_size_mb=0, vram_peak_mb=17.0, vram_overhead_mb=0.0, tensor_elements=0, actual_tensor_bytes=0)"
+      },
+      "layers_24_to_31": {
+        "baseline": "BenchmarkResult(tokens_per_second=0.0, memory_peak_mb=158.93359375, memory_overhead_mb=0.0, compression_ratio=1.0, quality_score=None, hidden_state_size_mb=0, vram_peak_mb=17.0, vram_overhead_mb=0.0, tensor_elements=0, actual_tensor_bytes=0)",
+        "none": "BenchmarkResult(tokens_per_second=0.0, memory_peak_mb=158.93359375, memory_overhead_mb=0.0, compression_ratio=1.0, quality_score=None, hidden_state_size_mb=0, vram_peak_mb=17.0, vram_overhead_mb=0.0, tensor_elements=0, actual_tensor_bytes=0)",
+        "float16": "BenchmarkResult(tokens_per_second=0.0, memory_peak_mb=158.93359375, memory_overhead_mb=0.0, compression_ratio=1.0, quality_score=None, hidden_state_size_mb=0, vram_peak_mb=17.0, vram_overhead_mb=0.0, tensor_elements=0, actual_tensor_bytes=0)",
+        "int8": "BenchmarkResult(tokens_per_second=0.0, memory_peak_mb=158.93359375, memory_overhead_mb=0.0, compression_ratio=1.0, quality_score=None, hidden_state_size_mb=0, vram_peak_mb=17.0, vram_overhead_mb=0.0, tensor_elements=0, actual_tensor_bytes=0)"
+      }
+    }
+  },
+  "summary": {
+    "avg_tokens_per_second": 0.0,
+    "avg_memory_overhead_mb": 0.0,
+    "avg_hidden_state_size_mb": 0,
+    "total_runs": 65
+  }
+}

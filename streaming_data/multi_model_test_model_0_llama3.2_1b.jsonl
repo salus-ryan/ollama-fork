@@ -1,0 +1,502 @@
+{"metadata": {"session_id": "capture_1757528936", "model": "llama3.2:1b", "prompt": "What is machine learning?", "hidden_config": {"layers": [-1], "compression": "float16", "max_sequence_length": 2048, "max_batch_size": 1, "enable_streaming": true, "memory_limit_mb": null}, "enable_logits": true, "max_tokens": 500, "start_time": 1757528936.574761, "triples_captured": 0, "total_tokens": 0, "file_size_mb": 0.0}}
+{"timestamp": 1757528936.7902777, "token": "Machine", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 0, "is_final": false}
+{"timestamp": 1757528936.822427, "token": " learning", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 1, "is_final": false}
+{"timestamp": 1757528936.8528287, "token": " (", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 2, "is_final": false}
+{"timestamp": 1757528936.884849, "token": "ML", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 3, "is_final": false}
+{"timestamp": 1757528936.9187293, "token": ")", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 4, "is_final": false}
+{"timestamp": 1757528936.9500744, "token": " is", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 5, "is_final": false}
+{"timestamp": 1757528936.9829032, "token": " a", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 6, "is_final": false}
+{"timestamp": 1757528937.0218577, "token": " sub", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 7, "is_final": false}
+{"timestamp": 1757528937.0596778, "token": "field", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 8, "is_final": false}
+{"timestamp": 1757528937.101399, "token": " of", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 9, "is_final": false}
+{"timestamp": 1757528937.1468894, "token": " artificial", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 10, "is_final": false}
+{"timestamp": 1757528937.1859922, "token": " intelligence", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 11, "is_final": false}
+{"timestamp": 1757528937.2217119, "token": " (", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 12, "is_final": false}
+{"timestamp": 1757528937.2553887, "token": "AI", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 13, "is_final": false}
+{"timestamp": 1757528937.289144, "token": ")", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 14, "is_final": false}
+{"timestamp": 1757528937.3242679, "token": " that", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 15, "is_final": false}
+{"timestamp": 1757528937.3603146, "token": " involves", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 16, "is_final": false}
+{"timestamp": 1757528937.3953428, "token": " training", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 17, "is_final": false}
+{"timestamp": 1757528937.43166, "token": " algorithms", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 18, "is_final": false}
+{"timestamp": 1757528937.4725819, "token": " to", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 19, "is_final": false}
+{"timestamp": 1757528937.509689, "token": " learn", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 20, "is_final": false}
+{"timestamp": 1757528937.5562057, "token": " from", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 21, "is_final": false}
+{"timestamp": 1757528937.5976863, "token": " data", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 22, "is_final": false}
+{"timestamp": 1757528937.6453886, "token": ",", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 23, "is_final": false}
+{"timestamp": 1757528937.6926482, "token": " without", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 24, "is_final": false}
+{"timestamp": 1757528937.742904, "token": " being", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 25, "is_final": false}
+{"timestamp": 1757528937.7968032, "token": " explicitly", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 26, "is_final": false}
+{"timestamp": 1757528937.8541636, "token": " programmed", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 27, "is_final": false}
+{"timestamp": 1757528937.902389, "token": ".", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 28, "is_final": false}
+{"timestamp": 1757528937.9481769, "token": " It", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 29, "is_final": false}
+{"timestamp": 1757528937.99537, "token": "'s", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 30, "is_final": false}
+{"timestamp": 1757528938.0473614, "token": " a", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 31, "is_final": false}
+{"timestamp": 1757528938.0997386, "token": " type", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 32, "is_final": false}
+{"timestamp": 1757528938.1549745, "token": " of", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 33, "is_final": false}
+{"timestamp": 1757528938.2031393, "token": " intelligence", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 34, "is_final": false}
+{"timestamp": 1757528938.2456317, "token": " that", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 35, "is_final": false}
+{"timestamp": 1757528938.2964764, "token": " allows", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 36, "is_final": false}
+{"timestamp": 1757528938.3452444, "token": " machines", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 37, "is_final": false}
+{"timestamp": 1757528938.3928986, "token": " to", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 38, "is_final": false}
+{"timestamp": 1757528938.4428525, "token": " automatically", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 39, "is_final": false}
+{"timestamp": 1757528938.485606, "token": " improve", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 40, "is_final": false}
+{"timestamp": 1757528938.5338137, "token": " their", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 41, "is_final": false}
+{"timestamp": 1757528938.5818925, "token": " performance", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 42, "is_final": false}
+{"timestamp": 1757528938.6304054, "token": " on", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 43, "is_final": false}
+{"timestamp": 1757528938.6792948, "token": " a", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 44, "is_final": false}
+{"timestamp": 1757528938.728232, "token": " task", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 45, "is_final": false}
+{"timestamp": 1757528938.781562, "token": " over", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 46, "is_final": false}
+{"timestamp": 1757528938.8315167, "token": " time", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 47, "is_final": false}
+{"timestamp": 1757528938.8849056, "token": ",", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 48, "is_final": false}
+{"timestamp": 1757528938.9335532, "token": " based", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 49, "is_final": false}
+{"timestamp": 1757528938.9798703, "token": " on", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 50, "is_final": false}
+{"timestamp": 1757528939.0322404, "token": " feedback", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 51, "is_final": false}
+{"timestamp": 1757528939.0832305, "token": " from", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 52, "is_final": false}
+{"timestamp": 1757528939.1266487, "token": " data", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 53, "is_final": false}
+{"timestamp": 1757528939.1685944, "token": ".\n\n", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 54, "is_final": false}
+{"timestamp": 1757528939.2254128, "token": "Imagine", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 55, "is_final": false}
+{"timestamp": 1757528939.2756958, "token": " you", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 56, "is_final": false}
+{"timestamp": 1757528939.3218572, "token": "'re", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 57, "is_final": false}
+{"timestamp": 1757528939.3623998, "token": " trying", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 58, "is_final": false}
+{"timestamp": 1757528939.4096453, "token": " to", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 59, "is_final": false}
+{"timestamp": 1757528939.4553564, "token": " teach", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 60, "is_final": false}
+{"timestamp": 1757528939.5079749, "token": " a", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 61, "is_final": false}
+{"timestamp": 1757528939.5508995, "token": " child", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 62, "is_final": false}
+{"timestamp": 1757528939.6021442, "token": " to", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 63, "is_final": false}
+{"timestamp": 1757528939.6558774, "token": " recognize", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 64, "is_final": false}
+{"timestamp": 1757528939.6959138, "token": " different", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 65, "is_final": false}
+{"timestamp": 1757528939.744082, "token": " types", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 66, "is_final": false}
+{"timestamp": 1757528939.7945821, "token": " of", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 67, "is_final": false}
+{"timestamp": 1757528939.8436415, "token": " animals", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 68, "is_final": false}
+{"timestamp": 1757528939.8857868, "token": ".", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 69, "is_final": false}
+{"timestamp": 1757528939.933404, "token": " You", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 70, "is_final": false}
+{"timestamp": 1757528939.9850783, "token": " show", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 71, "is_final": false}
+{"timestamp": 1757528940.032738, "token": " them", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 72, "is_final": false}
+{"timestamp": 1757528940.0811684, "token": " many", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 73, "is_final": false}
+{"timestamp": 1757528940.136669, "token": " pictures", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 74, "is_final": false}
+{"timestamp": 1757528940.1836612, "token": " of", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 75, "is_final": false}
+{"timestamp": 1757528940.229364, "token": " dogs", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 76, "is_final": false}
+{"timestamp": 1757528940.281889, "token": ",", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 77, "is_final": false}
+{"timestamp": 1757528940.3348396, "token": " cats", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 78, "is_final": false}
+{"timestamp": 1757528940.3836231, "token": ",", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 79, "is_final": false}
+{"timestamp": 1757528940.436606, "token": " and", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 80, "is_final": false}
+{"timestamp": 1757528940.4864151, "token": " birds", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 81, "is_final": false}
+{"timestamp": 1757528940.528723, "token": ",", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 82, "is_final": false}
+{"timestamp": 1757528940.5881267, "token": " and", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 83, "is_final": false}
+{"timestamp": 1757528940.6428304, "token": " they", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 84, "is_final": false}
+{"timestamp": 1757528940.698325, "token": " learn", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 85, "is_final": false}
+{"timestamp": 1757528940.7495277, "token": " to", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 86, "is_final": false}
+{"timestamp": 1757528940.7894242, "token": " identify", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 87, "is_final": false}
+{"timestamp": 1757528940.830381, "token": " them", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 88, "is_final": false}
+{"timestamp": 1757528940.8797095, "token": ".", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 89, "is_final": false}
+{"timestamp": 1757528940.92795, "token": " After", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 90, "is_final": false}
+{"timestamp": 1757528940.99181, "token": " that", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 91, "is_final": false}
+{"timestamp": 1757528941.0449097, "token": ",", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 92, "is_final": false}
+{"timestamp": 1757528941.0895026, "token": " when", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 93, "is_final": false}
+{"timestamp": 1757528941.13367, "token": " you", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 94, "is_final": false}
+{"timestamp": 1757528941.179601, "token": " show", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 95, "is_final": false}
+{"timestamp": 1757528941.2282062, "token": " them", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 96, "is_final": false}
+{"timestamp": 1757528941.282484, "token": " new", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 97, "is_final": false}
+{"timestamp": 1757528941.3361993, "token": " pictures", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 98, "is_final": false}
+{"timestamp": 1757528941.383038, "token": " that", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 99, "is_final": false}
+{"timestamp": 1757528941.4321, "token": " aren", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 100, "is_final": false}
+{"timestamp": 1757528941.4860198, "token": "'t", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 101, "is_final": false}
+{"timestamp": 1757528941.528508, "token": " in", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 102, "is_final": false}
+{"timestamp": 1757528941.5697136, "token": " the", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 103, "is_final": false}
+{"timestamp": 1757528941.6170287, "token": " training", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 104, "is_final": false}
+{"timestamp": 1757528941.6655643, "token": " set", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 105, "is_final": false}
+{"timestamp": 1757528941.7028682, "token": ",", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 106, "is_final": false}
+{"timestamp": 1757528941.7487028, "token": " they", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 107, "is_final": false}
+{"timestamp": 1757528941.7963061, "token": " can", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 108, "is_final": false}
+{"timestamp": 1757528941.8501036, "token": " use", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 109, "is_final": false}
+{"timestamp": 1757528941.9688969, "token": " their", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 110, "is_final": false}
+{"timestamp": 1757528942.0145435, "token": " knowledge", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 111, "is_final": false}
+{"timestamp": 1757528942.0680442, "token": " to", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 112, "is_final": false}
+{"timestamp": 1757528942.1850345, "token": " guess", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 113, "is_final": false}
+{"timestamp": 1757528942.2300797, "token": " what", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 114, "is_final": false}
+{"timestamp": 1757528942.2745466, "token": " type", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 115, "is_final": false}
+{"timestamp": 1757528942.3277307, "token": " of", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 116, "is_final": false}
+{"timestamp": 1757528942.381735, "token": " animal", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 117, "is_final": false}
+{"timestamp": 1757528942.4354844, "token": " it", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 118, "is_final": false}
+{"timestamp": 1757528942.4883988, "token": " is", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 119, "is_final": false}
+{"timestamp": 1757528942.550428, "token": ".\n\n", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 120, "is_final": false}
+{"timestamp": 1757528942.619302, "token": "In", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 121, "is_final": false}
+{"timestamp": 1757528942.6769552, "token": " machine", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 122, "is_final": false}
+{"timestamp": 1757528942.7363617, "token": " learning", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 123, "is_final": false}
+{"timestamp": 1757528942.7877645, "token": ",", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 124, "is_final": false}
+{"timestamp": 1757528942.8359554, "token": " this", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 125, "is_final": false}
+{"timestamp": 1757528942.892855, "token": " process", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 126, "is_final": false}
+{"timestamp": 1757528942.9486365, "token": " is", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 127, "is_final": false}
+{"timestamp": 1757528942.9985518, "token": " similar", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 128, "is_final": false}
+{"timestamp": 1757528943.038803, "token": ".", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 129, "is_final": false}
+{"timestamp": 1757528943.0845103, "token": " A", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 130, "is_final": false}
+{"timestamp": 1757528943.1344295, "token": " computer", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 131, "is_final": false}
+{"timestamp": 1757528943.18452, "token": " program", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 132, "is_final": false}
+{"timestamp": 1757528943.2299502, "token": " is", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 133, "is_final": false}
+{"timestamp": 1757528943.2821708, "token": " trained", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 134, "is_final": false}
+{"timestamp": 1757528943.3331957, "token": " on", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 135, "is_final": false}
+{"timestamp": 1757528943.38461, "token": " a", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 136, "is_final": false}
+{"timestamp": 1757528943.4301865, "token": " large", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 137, "is_final": false}
+{"timestamp": 1757528943.4781363, "token": " dataset", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 138, "is_final": false}
+{"timestamp": 1757528943.5303864, "token": ",", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 139, "is_final": false}
+{"timestamp": 1757528943.579047, "token": " which", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 140, "is_final": false}
+{"timestamp": 1757528943.633291, "token": " can", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 141, "is_final": false}
+{"timestamp": 1757528943.6825864, "token": " be", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 142, "is_final": false}
+{"timestamp": 1757528943.7306178, "token": " thought", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 143, "is_final": false}
+{"timestamp": 1757528943.770944, "token": " of", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 144, "is_final": false}
+{"timestamp": 1757528943.8140025, "token": " as", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 145, "is_final": false}
+{"timestamp": 1757528943.860721, "token": " a", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 146, "is_final": false}
+{"timestamp": 1757528943.909244, "token": " massive", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 147, "is_final": false}
+{"timestamp": 1757528943.9560955, "token": " collection", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 148, "is_final": false}
+{"timestamp": 1757528944.001488, "token": " of", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 149, "is_final": false}
+{"timestamp": 1757528944.0387087, "token": " labeled", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 150, "is_final": false}
+{"timestamp": 1757528944.0822449, "token": " examples", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 151, "is_final": false}
+{"timestamp": 1757528944.1366951, "token": " (", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 152, "is_final": false}
+{"timestamp": 1757528944.1961472, "token": "e", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 153, "is_final": false}
+{"timestamp": 1757528944.2513533, "token": ".g", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 154, "is_final": false}
+{"timestamp": 1757528944.3017232, "token": ".,", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 155, "is_final": false}
+{"timestamp": 1757528944.3436217, "token": " \"", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 156, "is_final": false}
+{"timestamp": 1757528944.391158, "token": "dog", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 157, "is_final": false}
+{"timestamp": 1757528944.440385, "token": "\"", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 158, "is_final": false}
+{"timestamp": 1757528944.4929714, "token": " and", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 159, "is_final": false}
+{"timestamp": 1757528944.5480897, "token": " \"", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 160, "is_final": false}
+{"timestamp": 1757528944.6047168, "token": "cat", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 161, "is_final": false}
+{"timestamp": 1757528944.6529644, "token": "\").", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 162, "is_final": false}
+{"timestamp": 1757528944.7001073, "token": " The", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 163, "is_final": false}
+{"timestamp": 1757528944.748055, "token": " algorithm", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 164, "is_final": false}
+{"timestamp": 1757528944.80468, "token": " then", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 165, "is_final": false}
+{"timestamp": 1757528944.8532693, "token": " learns", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 166, "is_final": false}
+{"timestamp": 1757528944.9069822, "token": " patterns", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 167, "is_final": false}
+{"timestamp": 1757528944.9580038, "token": " in", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 168, "is_final": false}
+{"timestamp": 1757528945.011967, "token": " the", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 169, "is_final": false}
+{"timestamp": 1757528945.0663152, "token": " data", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 170, "is_final": false}
+{"timestamp": 1757528945.1339858, "token": " and", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 171, "is_final": false}
+{"timestamp": 1757528945.1827462, "token": " uses", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 172, "is_final": false}
+{"timestamp": 1757528945.2339425, "token": " that", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 173, "is_final": false}
+{"timestamp": 1757528945.282953, "token": " knowledge", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 174, "is_final": false}
+{"timestamp": 1757528945.3290467, "token": " to", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 175, "is_final": false}
+{"timestamp": 1757528945.387985, "token": " make", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 176, "is_final": false}
+{"timestamp": 1757528945.4339266, "token": " predictions", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 177, "is_final": false}
+{"timestamp": 1757528945.4889157, "token": " or", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 178, "is_final": false}
+{"timestamp": 1757528945.5406585, "token": " decisions", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 179, "is_final": false}
+{"timestamp": 1757528945.5902932, "token": " on", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 180, "is_final": false}
+{"timestamp": 1757528945.6424155, "token": " new", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 181, "is_final": false}
+{"timestamp": 1757528945.6876748, "token": ",", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 182, "is_final": false}
+{"timestamp": 1757528945.740086, "token": " unseen", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 183, "is_final": false}
+{"timestamp": 1757528945.7825437, "token": " data", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 184, "is_final": false}
+{"timestamp": 1757528945.8367212, "token": ".\n\n", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 185, "is_final": false}
+{"timestamp": 1757528945.882227, "token": "There", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 186, "is_final": false}
+{"timestamp": 1757528945.915943, "token": " are", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 187, "is_final": false}
+{"timestamp": 1757528945.9494712, "token": " several", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 188, "is_final": false}
+{"timestamp": 1757528945.983106, "token": " key", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 189, "is_final": false}
+{"timestamp": 1757528946.0189552, "token": " aspects", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 190, "is_final": false}
+{"timestamp": 1757528946.052107, "token": " of", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 191, "is_final": false}
+{"timestamp": 1757528946.0854273, "token": " machine", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 192, "is_final": false}
+{"timestamp": 1757528946.118273, "token": " learning", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 193, "is_final": false}
+{"timestamp": 1757528946.1510854, "token": ":\n\n", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 194, "is_final": false}
+{"timestamp": 1757528946.1867075, "token": "1", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 195, "is_final": false}
+{"timestamp": 1757528946.2212434, "token": ".", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 196, "is_final": false}
+{"timestamp": 1757528946.2568438, "token": " **", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 197, "is_final": false}
+{"timestamp": 1757528946.2909598, "token": "Data", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 198, "is_final": false}
+{"timestamp": 1757528946.3251767, "token": "**:", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 199, "is_final": false}
+{"timestamp": 1757528946.357137, "token": " Machine", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 200, "is_final": false}
+{"timestamp": 1757528946.3933344, "token": " learning", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 201, "is_final": false}
+{"timestamp": 1757528946.4258256, "token": " algorithms", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 202, "is_final": false}
+{"timestamp": 1757528946.4623234, "token": " need", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 203, "is_final": false}
+{"timestamp": 1757528946.497435, "token": " a", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 204, "is_final": false}
+{"timestamp": 1757528946.530612, "token": " large", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 205, "is_final": false}
+{"timestamp": 1757528946.5638564, "token": " dataset", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 206, "is_final": false}
+{"timestamp": 1757528946.5997338, "token": " to", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 207, "is_final": false}
+{"timestamp": 1757528946.6340547, "token": " learn", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 208, "is_final": false}
+{"timestamp": 1757528946.6659305, "token": " from", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 209, "is_final": false}
+{"timestamp": 1757528946.7010255, "token": ".\n", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 210, "is_final": false}
+{"timestamp": 1757528946.7379403, "token": "2", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 211, "is_final": false}
+{"timestamp": 1757528946.7768848, "token": ".", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 212, "is_final": false}
+{"timestamp": 1757528946.8100784, "token": " **", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 213, "is_final": false}
+{"timestamp": 1757528946.843638, "token": "Model", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 214, "is_final": false}
+{"timestamp": 1757528946.8757417, "token": "**:", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 215, "is_final": false}
+{"timestamp": 1757528946.9102764, "token": " An", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 216, "is_final": false}
+{"timestamp": 1757528946.9450362, "token": " algorithm", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 217, "is_final": false}
+{"timestamp": 1757528946.9783013, "token": " is", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 218, "is_final": false}
+{"timestamp": 1757528947.0119827, "token": " used", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 219, "is_final": false}
+{"timestamp": 1757528947.0467236, "token": " to", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 220, "is_final": false}
+{"timestamp": 1757528947.0815933, "token": " transform", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 221, "is_final": false}
+{"timestamp": 1757528947.120156, "token": " input", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 222, "is_final": false}
+{"timestamp": 1757528947.1556869, "token": " data", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 223, "is_final": false}
+{"timestamp": 1757528947.1878512, "token": " into", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 224, "is_final": false}
+{"timestamp": 1757528947.221727, "token": " a", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 225, "is_final": false}
+{"timestamp": 1757528947.258241, "token": " useful", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 226, "is_final": false}
+{"timestamp": 1757528947.2944539, "token": " output", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 227, "is_final": false}
+{"timestamp": 1757528947.3302824, "token": " (", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 228, "is_final": false}
+{"timestamp": 1757528947.3671525, "token": "e", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 229, "is_final": false}
+{"timestamp": 1757528947.4046052, "token": ".g", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 230, "is_final": false}
+{"timestamp": 1757528947.4478905, "token": ".,", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 231, "is_final": false}
+{"timestamp": 1757528947.487728, "token": " classification", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 232, "is_final": false}
+{"timestamp": 1757528947.5347483, "token": ",", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 233, "is_final": false}
+{"timestamp": 1757528947.574516, "token": " regression", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 234, "is_final": false}
+{"timestamp": 1757528947.6120203, "token": ").\n", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 235, "is_final": false}
+{"timestamp": 1757528947.6491308, "token": "3", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 236, "is_final": false}
+{"timestamp": 1757528947.682014, "token": ".", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 237, "is_final": false}
+{"timestamp": 1757528947.716296, "token": " **", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 238, "is_final": false}
+{"timestamp": 1757528947.7498562, "token": "Training", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 239, "is_final": false}
+{"timestamp": 1757528947.7900553, "token": "**:", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 240, "is_final": false}
+{"timestamp": 1757528947.8256166, "token": " The", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 241, "is_final": false}
+{"timestamp": 1757528947.8603787, "token": " algorithm", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 242, "is_final": false}
+{"timestamp": 1757528947.8962662, "token": " learns", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 243, "is_final": false}
+{"timestamp": 1757528947.932437, "token": " from", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 244, "is_final": false}
+{"timestamp": 1757528947.9647143, "token": " the", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 245, "is_final": false}
+{"timestamp": 1757528948.0093834, "token": " data", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 246, "is_final": false}
+{"timestamp": 1757528948.0523894, "token": " and", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 247, "is_final": false}
+{"timestamp": 1757528948.0879343, "token": " adjusts", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 248, "is_final": false}
+{"timestamp": 1757528948.120951, "token": " its", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 249, "is_final": false}
+{"timestamp": 1757528948.1558166, "token": " model", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 250, "is_final": false}
+{"timestamp": 1757528948.1902835, "token": " parameters", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 251, "is_final": false}
+{"timestamp": 1757528948.2246664, "token": " until", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 252, "is_final": false}
+{"timestamp": 1757528948.2587707, "token": " it", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 253, "is_final": false}
+{"timestamp": 1757528948.2947686, "token": " reaches", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 254, "is_final": false}
+{"timestamp": 1757528948.32892, "token": " a", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 255, "is_final": false}
+{"timestamp": 1757528948.3653665, "token": " desired", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 256, "is_final": false}
+{"timestamp": 1757528948.3981962, "token": " level", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 257, "is_final": false}
+{"timestamp": 1757528948.4313498, "token": " of", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 258, "is_final": false}
+{"timestamp": 1757528948.4655302, "token": " accuracy", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 259, "is_final": false}
+{"timestamp": 1757528948.4994795, "token": ".\n", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 260, "is_final": false}
+{"timestamp": 1757528948.5304637, "token": "4", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 261, "is_final": false}
+{"timestamp": 1757528948.5663397, "token": ".", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 262, "is_final": false}
+{"timestamp": 1757528948.6022494, "token": " **", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 263, "is_final": false}
+{"timestamp": 1757528948.635654, "token": "Testing", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 264, "is_final": false}
+{"timestamp": 1757528948.6689646, "token": "**:", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 265, "is_final": false}
+{"timestamp": 1757528948.7009928, "token": " The", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 266, "is_final": false}
+{"timestamp": 1757528948.7353754, "token": " trained", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 267, "is_final": false}
+{"timestamp": 1757528948.7694116, "token": " model", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 268, "is_final": false}
+{"timestamp": 1757528948.810652, "token": " is", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 269, "is_final": false}
+{"timestamp": 1757528948.8467646, "token": " then", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 270, "is_final": false}
+{"timestamp": 1757528948.880773, "token": " tested", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 271, "is_final": false}
+{"timestamp": 1757528948.9156442, "token": " on", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 272, "is_final": false}
+{"timestamp": 1757528948.9479854, "token": " new", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 273, "is_final": false}
+{"timestamp": 1757528948.9820783, "token": " data", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 274, "is_final": false}
+{"timestamp": 1757528949.0243673, "token": " to", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 275, "is_final": false}
+{"timestamp": 1757528949.0596123, "token": " evaluate", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 276, "is_final": false}
+{"timestamp": 1757528949.096305, "token": " its", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 277, "is_final": false}
+{"timestamp": 1757528949.129332, "token": " performance", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 278, "is_final": false}
+{"timestamp": 1757528949.1627398, "token": ".\n\n", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 279, "is_final": false}
+{"timestamp": 1757528949.196094, "token": "Machine", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 280, "is_final": false}
+{"timestamp": 1757528949.2301104, "token": " learning", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 281, "is_final": false}
+{"timestamp": 1757528949.265273, "token": " has", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 282, "is_final": false}
+{"timestamp": 1757528949.300599, "token": " numerous", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 283, "is_final": false}
+{"timestamp": 1757528949.332886, "token": " applications", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 284, "is_final": false}
+{"timestamp": 1757528949.3670888, "token": " across", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 285, "is_final": false}
+{"timestamp": 1757528949.3995876, "token": " various", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 286, "is_final": false}
+{"timestamp": 1757528949.4332042, "token": " industries", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 287, "is_final": false}
+{"timestamp": 1757528949.4660835, "token": ",", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 288, "is_final": false}
+{"timestamp": 1757528949.497313, "token": " including", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 289, "is_final": false}
+{"timestamp": 1757528949.5319877, "token": ":\n\n", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 290, "is_final": false}
+{"timestamp": 1757528949.5692601, "token": "1", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 291, "is_final": false}
+{"timestamp": 1757528949.6029437, "token": ".", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 292, "is_final": false}
+{"timestamp": 1757528949.643922, "token": " **", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 293, "is_final": false}
+{"timestamp": 1757528949.6788962, "token": "Computer", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 294, "is_final": false}
+{"timestamp": 1757528949.7117996, "token": " Vision", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 295, "is_final": false}
+{"timestamp": 1757528949.745411, "token": "**:", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 296, "is_final": false}
+{"timestamp": 1757528949.782692, "token": " Image", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 297, "is_final": false}
+{"timestamp": 1757528949.8155904, "token": " recognition", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 298, "is_final": false}
+{"timestamp": 1757528949.8520648, "token": ",", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 299, "is_final": false}
+{"timestamp": 1757528949.8861928, "token": " object", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 300, "is_final": false}
+{"timestamp": 1757528949.920274, "token": " detection", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 301, "is_final": false}
+{"timestamp": 1757528949.9563851, "token": ",", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 302, "is_final": false}
+{"timestamp": 1757528949.9980547, "token": " and", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 303, "is_final": false}
+{"timestamp": 1757528950.0398016, "token": " facial", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 304, "is_final": false}
+{"timestamp": 1757528950.0746934, "token": " recognition", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 305, "is_final": false}
+{"timestamp": 1757528950.114769, "token": ".\n", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 306, "is_final": false}
+{"timestamp": 1757528950.1497438, "token": "2", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 307, "is_final": false}
+{"timestamp": 1757528950.1829016, "token": ".", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 308, "is_final": false}
+{"timestamp": 1757528950.2185957, "token": " **", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 309, "is_final": false}
+{"timestamp": 1757528950.2528088, "token": "Natural", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 310, "is_final": false}
+{"timestamp": 1757528950.2871308, "token": " Language", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 311, "is_final": false}
+{"timestamp": 1757528950.3341348, "token": " Processing", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 312, "is_final": false}
+{"timestamp": 1757528950.3968813, "token": " (", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 313, "is_final": false}
+{"timestamp": 1757528950.4479225, "token": "N", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 314, "is_final": false}
+{"timestamp": 1757528950.4873316, "token": "LP", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 315, "is_final": false}
+{"timestamp": 1757528950.533995, "token": ")**", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 316, "is_final": false}
+{"timestamp": 1757528950.5710866, "token": ":", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 317, "is_final": false}
+{"timestamp": 1757528950.6338232, "token": " Sent", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 318, "is_final": false}
+{"timestamp": 1757528950.6806538, "token": "iment", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 319, "is_final": false}
+{"timestamp": 1757528950.7154527, "token": " analysis", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 320, "is_final": false}
+{"timestamp": 1757528950.7553763, "token": ",", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 321, "is_final": false}
+{"timestamp": 1757528950.7930505, "token": " language", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 322, "is_final": false}
+{"timestamp": 1757528950.8289177, "token": " translation", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 323, "is_final": false}
+{"timestamp": 1757528950.8650844, "token": ",", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 324, "is_final": false}
+{"timestamp": 1757528950.8983269, "token": " and", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 325, "is_final": false}
+{"timestamp": 1757528950.9339943, "token": " text", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 326, "is_final": false}
+{"timestamp": 1757528950.9673944, "token": " summar", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 327, "is_final": false}
+{"timestamp": 1757528950.999089, "token": "ization", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 328, "is_final": false}
+{"timestamp": 1757528951.034094, "token": ".\n", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 329, "is_final": false}
+{"timestamp": 1757528951.066245, "token": "3", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 330, "is_final": false}
+{"timestamp": 1757528951.0998209, "token": ".", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 331, "is_final": false}
+{"timestamp": 1757528951.1355267, "token": " **", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 332, "is_final": false}
+{"timestamp": 1757528951.1755328, "token": "Speech", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 333, "is_final": false}
+{"timestamp": 1757528951.2136714, "token": " Recognition", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 334, "is_final": false}
+{"timestamp": 1757528951.2499702, "token": "**:", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 335, "is_final": false}
+{"timestamp": 1757528951.2828345, "token": " Voice", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 336, "is_final": false}
+{"timestamp": 1757528951.3172739, "token": " assistants", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 337, "is_final": false}
+{"timestamp": 1757528951.3520536, "token": " like", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 338, "is_final": false}
+{"timestamp": 1757528951.3866227, "token": " Siri", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 339, "is_final": false}
+{"timestamp": 1757528951.4196951, "token": " and", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 340, "is_final": false}
+{"timestamp": 1757528951.4523156, "token": " Alexa", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 341, "is_final": false}
+{"timestamp": 1757528951.487128, "token": ".\n", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 342, "is_final": false}
+{"timestamp": 1757528951.5239785, "token": "4", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 343, "is_final": false}
+{"timestamp": 1757528951.5584927, "token": ".", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 344, "is_final": false}
+{"timestamp": 1757528951.5923448, "token": " **", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 345, "is_final": false}
+{"timestamp": 1757528951.6294801, "token": "Recommend", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 346, "is_final": false}
+{"timestamp": 1757528951.6630883, "token": "ation", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 347, "is_final": false}
+{"timestamp": 1757528951.6997101, "token": " Systems", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 348, "is_final": false}
+{"timestamp": 1757528951.7333155, "token": "**:", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 349, "is_final": false}
+{"timestamp": 1757528951.7671728, "token": " Personal", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 350, "is_final": false}
+{"timestamp": 1757528951.7994454, "token": "ized", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 351, "is_final": false}
+{"timestamp": 1757528951.836384, "token": " product", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 352, "is_final": false}
+{"timestamp": 1757528951.869991, "token": " suggestions", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 353, "is_final": false}
+{"timestamp": 1757528951.9065905, "token": " based", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 354, "is_final": false}
+{"timestamp": 1757528951.938807, "token": " on", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 355, "is_final": false}
+{"timestamp": 1757528951.9733639, "token": " user", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 356, "is_final": false}
+{"timestamp": 1757528952.0149271, "token": " behavior", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 357, "is_final": false}
+{"timestamp": 1757528952.0514383, "token": ".\n\n", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 358, "is_final": false}
+{"timestamp": 1757528952.0856915, "token": "Some", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 359, "is_final": false}
+{"timestamp": 1757528952.1196134, "token": " common", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 360, "is_final": false}
+{"timestamp": 1757528952.1528623, "token": " machine", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 361, "is_final": false}
+{"timestamp": 1757528952.187548, "token": " learning", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 362, "is_final": false}
+{"timestamp": 1757528952.2262068, "token": " algorithms", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 363, "is_final": false}
+{"timestamp": 1757528952.262972, "token": " include", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 364, "is_final": false}
+{"timestamp": 1757528952.2989955, "token": ":\n\n", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 365, "is_final": false}
+{"timestamp": 1757528952.3324838, "token": "1", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 366, "is_final": false}
+{"timestamp": 1757528952.3657322, "token": ".", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 367, "is_final": false}
+{"timestamp": 1757528952.3996959, "token": " **", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 368, "is_final": false}
+{"timestamp": 1757528952.4370716, "token": "Sup", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 369, "is_final": false}
+{"timestamp": 1757528952.470782, "token": "ervised", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 370, "is_final": false}
+{"timestamp": 1757528952.5038419, "token": " Learning", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 371, "is_final": false}
+{"timestamp": 1757528952.544916, "token": "**:", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 372, "is_final": false}
+{"timestamp": 1757528952.5786858, "token": " Linear", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 373, "is_final": false}
+{"timestamp": 1757528952.6138344, "token": " Regression", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 374, "is_final": false}
+{"timestamp": 1757528952.650799, "token": ",", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 375, "is_final": false}
+{"timestamp": 1757528952.6839883, "token": " Decision", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 376, "is_final": false}
+{"timestamp": 1757528952.7182257, "token": " Trees", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 377, "is_final": false}
+{"timestamp": 1757528952.7511704, "token": ",", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 378, "is_final": false}
+{"timestamp": 1757528952.7833323, "token": " Neural", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 379, "is_final": false}
+{"timestamp": 1757528952.8179936, "token": " Networks", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 380, "is_final": false}
+{"timestamp": 1757528952.849882, "token": "\n", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 381, "is_final": false}
+{"timestamp": 1757528952.8807654, "token": "2", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 382, "is_final": false}
+{"timestamp": 1757528952.9203298, "token": ".", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 383, "is_final": false}
+{"timestamp": 1757528952.9550068, "token": " **", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 384, "is_final": false}
+{"timestamp": 1757528952.9895723, "token": "Un", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 385, "is_final": false}
+{"timestamp": 1757528953.0243053, "token": "sup", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 386, "is_final": false}
+{"timestamp": 1757528953.0599885, "token": "ervised", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 387, "is_final": false}
+{"timestamp": 1757528953.0996587, "token": " Learning", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 388, "is_final": false}
+{"timestamp": 1757528953.138122, "token": "**:", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 389, "is_final": false}
+{"timestamp": 1757528953.1730926, "token": " K", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 390, "is_final": false}
+{"timestamp": 1757528953.2075665, "token": "-M", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 391, "is_final": false}
+{"timestamp": 1757528953.2446623, "token": "e", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 392, "is_final": false}
+{"timestamp": 1757528953.280318, "token": "ans", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 393, "is_final": false}
+{"timestamp": 1757528953.3148787, "token": " Cl", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 394, "is_final": false}
+{"timestamp": 1757528953.3490722, "token": "ustering", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 395, "is_final": false}
+{"timestamp": 1757528953.382514, "token": ",", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 396, "is_final": false}
+{"timestamp": 1757528953.416221, "token": " Principal", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 397, "is_final": false}
+{"timestamp": 1757528953.4518583, "token": " Component", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 398, "is_final": false}
+{"timestamp": 1757528953.4841948, "token": " Analysis", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 399, "is_final": false}
+{"timestamp": 1757528953.5150404, "token": " (", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 400, "is_final": false}
+{"timestamp": 1757528953.5478332, "token": "PCA", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 401, "is_final": false}
+{"timestamp": 1757528953.581219, "token": ")\n", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 402, "is_final": false}
+{"timestamp": 1757528953.6173193, "token": "3", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 403, "is_final": false}
+{"timestamp": 1757528953.6521118, "token": ".", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 404, "is_final": false}
+{"timestamp": 1757528953.6839821, "token": " **", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 405, "is_final": false}
+{"timestamp": 1757528953.7164285, "token": "Re", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 406, "is_final": false}
+{"timestamp": 1757528953.7502348, "token": "in", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 407, "is_final": false}
+{"timestamp": 1757528953.783563, "token": "forcement", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 408, "is_final": false}
+{"timestamp": 1757528953.8207955, "token": " Learning", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 409, "is_final": false}
+{"timestamp": 1757528953.9064634, "token": "**:", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 410, "is_final": false}
+{"timestamp": 1757528953.9391813, "token": " Q", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 411, "is_final": false}
+{"timestamp": 1757528953.975422, "token": "-L", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 412, "is_final": false}
+{"timestamp": 1757528954.011223, "token": "earning", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 413, "is_final": false}
+{"timestamp": 1757528954.1314554, "token": ",", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 414, "is_final": false}
+{"timestamp": 1757528954.1660132, "token": " Deep", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 415, "is_final": false}
+{"timestamp": 1757528954.203587, "token": " Q", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 416, "is_final": false}
+{"timestamp": 1757528954.238572, "token": "-N", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 417, "is_final": false}
+{"timestamp": 1757528954.2756388, "token": "etwork", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 418, "is_final": false}
+{"timestamp": 1757528954.313294, "token": "s", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 419, "is_final": false}
+{"timestamp": 1757528954.3491867, "token": " (", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 420, "is_final": false}
+{"timestamp": 1757528954.3844187, "token": "D", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 421, "is_final": false}
+{"timestamp": 1757528954.419543, "token": "QN", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 422, "is_final": false}
+{"timestamp": 1757528954.456618, "token": ")\n\n", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 423, "is_final": false}
+{"timestamp": 1757528954.491968, "token": "Machine", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 424, "is_final": false}
+{"timestamp": 1757528954.5282688, "token": " learning", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 425, "is_final": false}
+{"timestamp": 1757528954.564375, "token": " has", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 426, "is_final": false}
+{"timestamp": 1757528954.5988653, "token": " many", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 427, "is_final": false}
+{"timestamp": 1757528954.6337724, "token": " benefits", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 428, "is_final": false}
+{"timestamp": 1757528954.6723855, "token": ",", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 429, "is_final": false}
+{"timestamp": 1757528954.708401, "token": " including", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 430, "is_final": false}
+{"timestamp": 1757528954.7455451, "token": ":\n\n", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 431, "is_final": false}
+{"timestamp": 1757528954.7822814, "token": "1", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 432, "is_final": false}
+{"timestamp": 1757528954.8188598, "token": ".", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 433, "is_final": false}
+{"timestamp": 1757528954.8544672, "token": " **", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 434, "is_final": false}
+{"timestamp": 1757528954.8953648, "token": "Improved", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 435, "is_final": false}
+{"timestamp": 1757528954.936717, "token": " accuracy", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 436, "is_final": false}
+{"timestamp": 1757528954.977584, "token": "**:", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 437, "is_final": false}
+{"timestamp": 1757528955.0129824, "token": " Algorithms", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 438, "is_final": false}
+{"timestamp": 1757528955.0502748, "token": " can", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 439, "is_final": false}
+{"timestamp": 1757528955.0856318, "token": " learn", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 440, "is_final": false}
+{"timestamp": 1757528955.1219988, "token": " complex", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 441, "is_final": false}
+{"timestamp": 1757528955.1565132, "token": " patterns", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 442, "is_final": false}
+{"timestamp": 1757528955.1928594, "token": " in", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 443, "is_final": false}
+{"timestamp": 1757528955.2285306, "token": " data", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 444, "is_final": false}
+{"timestamp": 1757528955.2646585, "token": ".\n", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 445, "is_final": false}
+{"timestamp": 1757528955.3025773, "token": "2", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 446, "is_final": false}
+{"timestamp": 1757528955.3396409, "token": ".", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 447, "is_final": false}
+{"timestamp": 1757528955.3762755, "token": " **", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 448, "is_final": false}
+{"timestamp": 1757528955.411106, "token": "Increased", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 449, "is_final": false}
+{"timestamp": 1757528955.4494145, "token": " efficiency", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 450, "is_final": false}
+{"timestamp": 1757528955.490472, "token": "**:", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 451, "is_final": false}
+{"timestamp": 1757528955.5273778, "token": " Machines", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 452, "is_final": false}
+{"timestamp": 1757528955.5626714, "token": " can", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 453, "is_final": false}
+{"timestamp": 1757528955.5964956, "token": " automate", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 454, "is_final": false}
+{"timestamp": 1757528955.6330388, "token": " tasks", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 455, "is_final": false}
+{"timestamp": 1757528955.6686156, "token": " without", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 456, "is_final": false}
+{"timestamp": 1757528955.7069466, "token": " human", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 457, "is_final": false}
+{"timestamp": 1757528955.7478387, "token": " intervention", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 458, "is_final": false}
+{"timestamp": 1757528955.7849069, "token": ".\n", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 459, "is_final": false}
+{"timestamp": 1757528955.826778, "token": "3", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 460, "is_final": false}
+{"timestamp": 1757528955.8633068, "token": ".", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 461, "is_final": false}
+{"timestamp": 1757528955.8986828, "token": " **", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 462, "is_final": false}
+{"timestamp": 1757528955.9358976, "token": "Personal", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 463, "is_final": false}
+{"timestamp": 1757528955.9706233, "token": "ization", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 464, "is_final": false}
+{"timestamp": 1757528956.006811, "token": "**:", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 465, "is_final": false}
+{"timestamp": 1757528956.0427408, "token": " tailored", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 466, "is_final": false}
+{"timestamp": 1757528956.0783477, "token": " recommendations", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 467, "is_final": false}
+{"timestamp": 1757528956.1136823, "token": " and", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 468, "is_final": false}
+{"timestamp": 1757528956.1492002, "token": " experiences", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 469, "is_final": false}
+{"timestamp": 1757528956.184659, "token": ".\n\n", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 470, "is_final": false}
+{"timestamp": 1757528956.2196927, "token": "However", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 471, "is_final": false}
+{"timestamp": 1757528956.2579403, "token": ",", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 472, "is_final": false}
+{"timestamp": 1757528956.2958825, "token": " machine", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 473, "is_final": false}
+{"timestamp": 1757528956.330112, "token": " learning", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 474, "is_final": false}
+{"timestamp": 1757528956.366029, "token": " also", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 475, "is_final": false}
+{"timestamp": 1757528956.3986511, "token": " raises", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 476, "is_final": false}
+{"timestamp": 1757528956.4332695, "token": " concerns", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 477, "is_final": false}
+{"timestamp": 1757528956.468874, "token": " about", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 478, "is_final": false}
+{"timestamp": 1757528956.5026278, "token": ":\n\n", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 479, "is_final": false}
+{"timestamp": 1757528956.539691, "token": "1", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 480, "is_final": false}
+{"timestamp": 1757528956.5741584, "token": ".", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 481, "is_final": false}
+{"timestamp": 1757528956.6109867, "token": " **", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 482, "is_final": false}
+{"timestamp": 1757528956.6466784, "token": "Bias", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 483, "is_final": false}
+{"timestamp": 1757528956.6928895, "token": "**:", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 484, "is_final": false}
+{"timestamp": 1757528956.7300353, "token": " algorithms", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 485, "is_final": false}
+{"timestamp": 1757528956.7649727, "token": " can", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 486, "is_final": false}
+{"timestamp": 1757528956.7992213, "token": " perpet", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 487, "is_final": false}
+{"timestamp": 1757528956.836153, "token": "uate", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 488, "is_final": false}
+{"timestamp": 1757528956.8780615, "token": " existing", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 489, "is_final": false}
+{"timestamp": 1757528956.9190788, "token": " biases", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 490, "is_final": false}
+{"timestamp": 1757528956.9544663, "token": " if", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 491, "is_final": false}
+{"timestamp": 1757528956.9988, "token": " trained", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 492, "is_final": false}
+{"timestamp": 1757528957.0373054, "token": " on", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 493, "is_final": false}
+{"timestamp": 1757528957.078791, "token": " biased", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 494, "is_final": false}
+{"timestamp": 1757528957.1163924, "token": " data", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 495, "is_final": false}
+{"timestamp": 1757528957.148944, "token": ".\n", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 496, "is_final": false}
+{"timestamp": 1757528957.1852434, "token": "2", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 497, "is_final": false}
+{"timestamp": 1757528957.218739, "token": ".", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 498, "is_final": false}
+{"timestamp": 1757528957.2501605, "token": " **", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 499, "is_final": false}
+{"timestamp": 1757528957.2507925, "token": "", "token_id": null, "logits": null, "hidden_states": null, "sequence_position": 500, "is_final": true}

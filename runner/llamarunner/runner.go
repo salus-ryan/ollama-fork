@@ -81,6 +81,9 @@ type Sequence struct {
 
 	doneReason llm.DoneReason
 
+	// Hidden states captured during generation
+	hiddenStates []api.HiddenState
+
 	// Metrics
 	startProcessingTime time.Time
 	startGenerationTime time.Time
@@ -443,6 +446,16 @@ func (s *Server) processBatch(tokenBatch *llama.Batch, embedBatch *llama.Batch) 
 		return fmt.Errorf("failed to decode batch: %w", err)
 	}
 
+	// Capture hidden states if enabled
+	if s.lc.IsHiddenStateEnabled() {
+		for _, seq := range s.seqs {
+			if seq != nil {
+				states := s.lc.GetHiddenStates(seq.cache.Id)
+				seq.hiddenStates = append(seq.hiddenStates, states...)
+			}
+		}
+	}
+
 	for i, seq := range s.seqs {
 		if seq == nil {
 			continue
@@ -577,6 +590,11 @@ func (s *Server) completion(w http.ResponseWriter, r *http.Request) {
 		Grammar:        req.Grammar,
 	}
 
+	// Configure hidden state capture if requested
+	if req.ExposeHidden != nil && req.ExposeHidden.Enabled {
+		s.lc.SetHiddenStateConfig(req.ExposeHidden)
+	}
+
 	seq, err := s.NewSequence(req.Prompt, req.Images, NewSequenceParams{
 		numPredict:     req.Options.NumPredict,
 		stop:           req.Options.Stop,
@@ -649,6 +667,7 @@ func (s *Server) completion(w http.ResponseWriter, r *http.Request) {
 					PromptEvalDuration: seq.startGenerationTime.Sub(seq.startProcessingTime),
 					EvalCount:          seq.numDecoded,
 					EvalDuration:       time.Since(seq.startGenerationTime),
+					HiddenStates:       seq.hiddenStates,
 				}); err != nil {
 					http.Error(w, fmt.Sprintf("failed to encode final response: %v", err), http.StatusInternalServerError)
 				}

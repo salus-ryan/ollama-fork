@@ -244,8 +244,17 @@ class HiddenStateFusion:
     ) -> Tuple[List[np.ndarray], np.ndarray]:
         """Project all hidden states to a common lower-dimensional space."""
         
+        # Determine available dimensions from the data
+        sample_states = hidden_states_list[0]
+        if len(sample_states.shape) == 3:
+            available_features = sample_states.shape[-1]
+            total_samples = sum(states.reshape(-1, states.shape[-1]).shape[0] for states in hidden_states_list)
+        else:
+            available_features = sample_states.shape[-1]
+            total_samples = sum(states.shape[0] for states in hidden_states_list)
+        
         if target_dim is None:
-            target_dim = min(512, self.hidden_dim // 8)  # Reasonable default
+            target_dim = min(256, available_features // 4, total_samples - 1)  # Safe default
         
         # Stack all hidden states for PCA
         all_states = []

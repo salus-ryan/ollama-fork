@@ -1,0 +1,23 @@
+{
+  "session_id": "capture_1757528914",
+  "model": "llama3.2:1b",
+  "prompt": "Explain quantum computing in simple terms",
+  "hidden_config": {
+    "layers": [
+      -1
+    ],
+    "compression": "float16",
+    "max_sequence_length": 2048,
+    "max_batch_size": 1,
+    "enable_streaming": true,
+    "memory_limit_mb": null
+  },
+  "enable_logits": true,
+  "max_tokens": 50,
+  "start_time": 1757528914.6750104,
+  "triples_captured": 51,
+  "total_tokens": 50,
+  "file_size_mb": 0.007824897766113281,
+  "end_time": 1757528917.494144,
+  "duration_seconds": 2.8191335201263428
+}

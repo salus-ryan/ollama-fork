@@ -4,9 +4,60 @@
   </a>
 </div>
 
-# Ollama
+# Ollama with Advanced Hidden States & Braiding Mathematics
 
-Get up and running with large language models.
+Get up and running with large language models, now with **advanced hidden state capture** and **mathematical braiding** capabilities for latent-level model fusion.
+
+## 🧠 New Features: Hidden States & Braiding
+
+This fork extends Ollama with cutting-edge capabilities for accessing and fusing transformer hidden states:
+
+### **Hidden States Capture**
+- **Real-time extraction** of layer-wise hidden states during generation
+- **Multiple compression modes**: float32, float16, int8 for memory efficiency
+- **Configurable layer selection**: specific layers, last N layers, or full model
+- **Streaming API integration** with existing generate/chat endpoints
+
+### **Mathematical Braiding System**
+- **Logit Fusion**: Entropy-weighted averaging and top-k consensus for clean vocab alignment
+- **Hidden State Fusion**: Orthogonal-covariance mathematics preventing braid collapse into noise
+  - Whitening transformations with eigendecomposition
+  - Procrustes orthogonal alignment
+  - PCA projection to common latent spaces
+- **Multi-model braiding** for enhanced reasoning and coherence
+
+### **Safety & Performance**
+- **Memory management** with automatic fallbacks and OOM prevention
+- **VRAM monitoring** for GPU memory optimization  
+- **Benchmarking framework** for performance analysis
+- **Progressive compression** under memory pressure
+
+### **Quick Start with Hidden States**
+
+```bash
+# Generate with hidden state capture (last layer, float16 compression)
+curl http://localhost:11434/api/generate -d '{
+  "model": "llama3.2",
+  "prompt": "Explain quantum computing",
+  "hidden_states": {
+    "layers": [-1],
+    "compression": "float16"
+  }
+}'
+
+# Multi-model braiding capture
+python examples/streaming_triples_capture.py \
+  --multi-model llama3.2:3b tinyllama:1.1b \
+  --prompt "What is machine learning?" \
+  --layers -1 --compression float16
+```
+
+### **Documentation**
+- [Hidden States API Documentation](docs/hidden-states.md)
+- [Braiding Mathematics Examples](examples/)
+- [Benchmarking Guide](examples/benchmark_hidden_states.py)
+
+---
 
 ### macOS
 

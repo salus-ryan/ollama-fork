@@ -19,6 +19,7 @@ package llama
 #include "gguf.h"
 
 #include "sampling_ext.h"
+#include "hidden_states_ext.h"
 
 extern bool llamaProgressCallback(float progress, void *user_data);
 extern void llamaLog(int level, char* text, void* user_data);
@@ -42,6 +43,7 @@ import (
 	_ "github.com/ollama/ollama/llama/llama.cpp/common"
 	_ "github.com/ollama/ollama/llama/llama.cpp/src"
 	_ "github.com/ollama/ollama/llama/llama.cpp/tools/mtmd"
+	_ "github.com/ollama/ollama/api"
 	ggml "github.com/ollama/ollama/ml/backend/ggml/ggml/src"
 )
 
@@ -205,6 +207,97 @@ func (c *Context) GetEmbeddingsIth(i int) []float32 {
 	embeddings := make([]float32, c.Model().NEmbd())
 	_ = copy(embeddings, unsafe.Slice((*float32)(e), c.Model().NEmbd()))
 	return embeddings
+}
+
+// SetHiddenStateConfig configures hidden state capture for this context
+func (c *Context) SetHiddenStateConfig(config *api.HiddenStateConfig) {
+	if config == nil || !config.Enabled {
+		C.llama_set_hidden_config(c.c, nil)
+		return
+	}
+
+	cConfig := C.llama_hidden_config{
+		enabled:         C.bool(config.Enabled),
+		last_layer_only: C.bool(config.LastLayerOnly),
+		compression:     C.int(0), // Default to no compression
+	}
+
+	// Set compression type
+	switch config.Compression {
+	case "float16":
+		cConfig.compression = C.int(1)
+	case "int8":
+		cConfig.compression = C.int(2)
+	default:
+		cConfig.compression = C.int(0) // No compression
+	}
+
+	// Configure layers to capture
+	if len(config.Layers) > 0 {
+		cConfig.num_layers = C.int(len(config.Layers))
+		layersPtr := C.malloc(C.size_t(len(config.Layers)) * C.size_t(unsafe.Sizeof(C.int(0))))
+		defer C.free(layersPtr)
+		
+		layers := (*[1 << 30]C.int)(layersPtr)[:len(config.Layers):len(config.Layers)]
+		for i, layer := range config.Layers {
+			layers[i] = C.int(layer)
+		}
+		cConfig.layers = (*C.int)(layersPtr)
+	}
+
+	C.llama_set_hidden_config(c.c, &cConfig)
+}
+
+// GetHiddenStates retrieves captured hidden states for a sequence
+func (c *Context) GetHiddenStates(seqId int) []api.HiddenState {
+	result := C.llama_get_hidden_states(c.c, C.int(seqId))
+	if result == nil {
+		return nil
+	}
+	defer C.llama_free_hidden_result(result)
+
+	states := make([]api.HiddenState, int(result.num_states))
+	cStates := (*[1 << 30]C.llama_hidden_state)(unsafe.Pointer(result.states))[:int(result.num_states):int(result.num_states)]
+
+	for i, cState := range cStates {
+		// Copy shape information
+		shape := make([]int, int(cState.shape_len))
+		cShape := (*[1 << 30]C.int)(unsafe.Pointer(cState.shape))[:int(cState.shape_len):int(cState.shape_len)]
+		for j, dim := range cShape {
+			shape[j] = int(dim)
+		}
+
+		// Copy tensor data
+		data := make([]float32, int(cState.data_len))
+		cData := (*[1 << 30]C.float)(unsafe.Pointer(cState.data))[:int(cState.data_len):int(cState.data_len)]
+		for j, val := range cData {
+			data[j] = float32(val)
+		}
+
+		// Set compression type
+		compression := "none"
+		switch int(cState.compression) {
+		case 1:
+			compression = "float16"
+		case 2:
+			compression = "int8"
+		}
+
+		states[i] = api.HiddenState{
+			Layer:       int(cState.layer),
+			Shape:       shape,
+			Data:        data,
+			TokenIndex:  int(cState.token_index),
+			Compression: compression,
+		}
+	}
+
+	return states
+}
+
+// IsHiddenStateEnabled checks if hidden state capture is enabled
+func (c *Context) IsHiddenStateEnabled() bool {
+	return bool(C.llama_is_hidden_enabled(c.c))
 }
 
 type ModelParams struct {
