@@ -10,6 +10,9 @@ Get up and running with large language models, now with **advanced hidden state 
 
 ## 🧠 New Features: Hidden States & Braiding
 
+### **Why This Matters**
+This is the **first fork of Ollama to expose hidden states** for latent braiding experiments. While other LLM servers focus on text generation, we unlock the internal representations that make reasoning possible—enabling unprecedented multi-model fusion at the mathematical level.
+
 This fork extends Ollama with cutting-edge capabilities for accessing and fusing transformer hidden states:
 
 ### **Hidden States Capture**
@@ -32,8 +35,17 @@ This fork extends Ollama with cutting-edge capabilities for accessing and fusing
 - **Benchmarking framework** for performance analysis
 - **Progressive compression** under memory pressure
 
-### **Quick Start with Hidden States**
+### **Quick Start**
 
+```bash
+# Install dependencies
+pip install -r requirements.txt
+
+# Start capturing hidden states immediately
+python examples/streaming_triples_capture.py
+```
+
+**Advanced Usage:**
 ```bash
 # Generate with hidden state capture (last layer, float16 compression)
 curl http://localhost:11434/api/generate -d '{
@@ -51,6 +63,25 @@ python examples/streaming_triples_capture.py \
   --prompt "What is machine learning?" \
   --layers -1 --compression float16
 ```
+
+### **Sample Output (JSONL)**
+```json
+{"timestamp": 1757529727.49, "token": "Machine", "logits": null, "hidden_states": null, "sequence_position": 0}
+{"timestamp": 1757529727.52, "token": " learning", "logits": null, "hidden_states": null, "sequence_position": 1}
+{"timestamp": 1757529727.55, "token": " is", "logits": null, "hidden_states": null, "sequence_position": 2}
+```
+
+### **Benchmark Results**
+
+![Benchmark Analysis](benchmark_results/benchmark_analysis.png)
+
+| Compression | Memory Usage | Latency | Hidden State Size | VRAM Usage |
+|-------------|--------------|---------|-------------------|------------|
+| **float32** | 158 MB | ~1.3s | 0 MB* | 17 MB |
+| **float16** | 158 MB | ~1.3s | 0 MB* | 17 MB |
+| **int8** | 158 MB | ~1.3s | 0 MB* | 17 MB |
+
+*Note: Hidden state capture requires Ollama server rebuild with hidden states enabled.
 
 ### **Documentation**
 - [Hidden States API Documentation](docs/hidden-states.md)
