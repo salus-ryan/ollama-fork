@@ -1337,7 +1337,9 @@ number ::= ("-"? ([0-9] | [1-9] [0-9]*)) ("." [0-9]+)? ([eE] [-+]? [0-9]+)?
 ws ::= ([ \t\n] ws)?
 `
 
-const maxBufferSize = 512 * format.KiloByte
+// Buffer used by bufio.Scanner when reading runner streaming responses.
+// Hidden states payloads can be large (MBs), so use a generous limit.
+const maxBufferSize = 64 * 1024 * 1024 // 64 MiB
 
 type ImageData struct {
 	Data []byte `json:"data"`
@@ -1349,6 +1351,9 @@ type CompletionRequest struct {
 	Format  json.RawMessage
 	Images  []ImageData
 	Options *api.Options
+
+	// Whether to use Harmony parsing pipeline (set by routes based on model/template)
+	UseHarmony   bool
 
 	Grammar       string // set before sending the request to the subprocess
 	ParserType    parser.TokenParserType

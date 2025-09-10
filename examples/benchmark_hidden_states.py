@@ -47,7 +47,15 @@ class HiddenStatesBenchmark:
     """Comprehensive benchmarking suite for hidden states performance."""
     
     def __init__(self, base_url: str = "http://localhost:11434"):
-        self.base_url = base_url
+        import os
+        # Allow overriding via OLLAMA_HOST (e.g., 127.0.0.1:11501)
+        host = os.getenv("OLLAMA_HOST")
+        if host:
+            if not host.startswith("http"):
+                host = f"http://{host}"
+            self.base_url = host
+        else:
+            self.base_url = base_url
         self.process = psutil.Process()
         self.cuda_available = TORCH_AVAILABLE and torch.cuda.is_available()
         
@@ -104,7 +112,11 @@ class HiddenStatesBenchmark:
         }
         
         if hidden_config:
-            request_data["hidden_states"] = hidden_config
+            # Server expects the field name 'expose_hidden' in the request body
+            # Hidden state capture is disabled unless `enabled` is explicitly true.
+            cfg = {"enabled": True}
+            cfg.update(hidden_config)
+            request_data["expose_hidden"] = cfg
         
         # Start timing
         start_time = time.time()
@@ -114,6 +126,7 @@ class HiddenStatesBenchmark:
         hidden_state_size = 0
         tensor_elements = 0
         generated_text = ""
+        hidden_states_captured = False
         
         try:
             response = requests.post(
@@ -122,9 +135,16 @@ class HiddenStatesBenchmark:
                 stream=True
             )
             
+            if response.status_code != 200:
+                print(f"HTTP Error {response.status_code}: {response.text}")
+                return BenchmarkResult(0, 0, 0, 0)
+            
             for line in response.iter_lines():
                 if line:
-                    data = json.loads(line)
+                    try:
+                        data = json.loads(line)
+                    except json.JSONDecodeError:
+                        continue
                     
                     # Track memory usage (RAM and VRAM)
                     current_memory = self.measure_memory_usage()
@@ -138,17 +158,19 @@ class HiddenStatesBenchmark:
                         generated_text += data['response']
                     
                     # Measure hidden state size properly
-                    if 'hidden_states' in data:
+                    if 'hidden_states' in data and data['hidden_states']:
+                        hidden_states_captured = True
                         hidden_states = data['hidden_states']
-                        if isinstance(hidden_states, dict):
-                            for layer_name, layer_data in hidden_states.items():
-                                if isinstance(layer_data, list):
-                                    # Calculate actual tensor size
+                        
+                        if isinstance(hidden_states, list):
+                            # Handle list format
+                            for layer_data in hidden_states:
+                                if isinstance(layer_data, dict) and 'data' in layer_data:
                                     try:
-                                        arr = np.asarray(layer_data, dtype=np.float32)
+                                        arr = np.asarray(layer_data['data'], dtype=np.float32)
                                         tensor_elements += arr.size
                                         
-                                        # Estimate compression sizes
+                                        # Calculate size based on compression
                                         if hidden_config and 'compression' in hidden_config:
                                             if hidden_config['compression'] == 'float16':
                                                 hidden_state_size += arr.astype(np.float16).nbytes
@@ -158,8 +180,30 @@ class HiddenStatesBenchmark:
                                                 hidden_state_size += arr.nbytes
                                         else:
                                             hidden_state_size += arr.nbytes
-                                    except Exception:
-                                        # Fallback to string length
+                                    except Exception as e:
+                                        print(f"Error processing hidden state data: {e}")
+                                        hidden_state_size += len(str(layer_data))
+                        
+                        elif isinstance(hidden_states, dict):
+                            # Handle dict format
+                            for layer_name, layer_data in hidden_states.items():
+                                if isinstance(layer_data, list):
+                                    try:
+                                        arr = np.asarray(layer_data, dtype=np.float32)
+                                        tensor_elements += arr.size
+                                        
+                                        # Calculate size based on compression
+                                        if hidden_config and 'compression' in hidden_config:
+                                            if hidden_config['compression'] == 'float16':
+                                                hidden_state_size += arr.astype(np.float16).nbytes
+                                            elif hidden_config['compression'] == 'int8':
+                                                hidden_state_size += arr.astype(np.int8).nbytes
+                                            else:
+                                                hidden_state_size += arr.nbytes
+                                        else:
+                                            hidden_state_size += arr.nbytes
+                                    except Exception as e:
+                                        print(f"Error processing layer {layer_name}: {e}")
                                         hidden_state_size += len(str(layer_data))
                     
                     if data.get('done', False):
@@ -168,6 +212,11 @@ class HiddenStatesBenchmark:
         except Exception as e:
             print(f"Benchmark error: {e}")
             return BenchmarkResult(0, 0, 0, 0)
+        
+        # If hidden states were requested but not captured, record this fact
+        if hidden_config and not hidden_states_captured:
+            print(f"Warning: Hidden states requested but not received from server.")
+            # Don't simulate - leave as 0 to show actual server behavior
         
         # Calculate metrics
         end_time = time.time()
@@ -211,7 +260,7 @@ class HiddenStatesBenchmark:
         self, 
         model: str, 
         prompt: str,
-        layers: List[int] = None
+        base_config: Dict = None
     ) -> Dict[str, BenchmarkResult]:
         """Benchmark different compression modes."""
         
@@ -221,9 +270,15 @@ class HiddenStatesBenchmark:
             {"compression": "int8"}
         ]
         
-        if layers:
+        # Merge base_config (e.g., last_layer_only) into each compression mode
+        if base_config:
             for mode in compression_modes:
-                mode["layers"] = layers
+                merged = {}
+                merged.update(base_config)
+                # remove helper flag if present
+                if merged.get("all_layers"):
+                    merged.pop("all_layers", None)
+                mode.update(merged)
         
         results = {}
         
@@ -318,12 +373,11 @@ class HiddenStatesBenchmark:
         for i, prompt in enumerate(test_prompts):
             print(f"\nTesting prompt {i+1}/{len(test_prompts)}: {prompt[:50]}...")
             
-            # Test different layer configurations
-            layer_configs = [
+            # Test different capture configurations
+            capture_configs = [
                 None,  # No hidden states
-                [-1],  # Last layer only
-                [-3, -2, -1],  # Last 3 layers
-                list(range(24, 32))  # Layers 24-31 (typical for larger models)
+                {"last_layer_only": True},  # Last layer only
+                {"all_layers": True},  # All layers (no specific layer selection)
             ]
             
             prompt_results = {}
@@ -331,28 +385,26 @@ class HiddenStatesBenchmark:
             # Add concurrency test
             print(f"  Testing concurrency performance...")
             concurrency_results = self.benchmark_concurrency(
-                model, prompt, num_concurrent=4, hidden_config={"layers": [-1], "compression": "float16"}
+                model, prompt, num_concurrent=4, hidden_config={"last_layer_only": True, "compression": "float16"}
             )
             prompt_results["concurrency"] = concurrency_results
             
-            for j, layers in enumerate(layer_configs):
+            for j, cfg in enumerate(capture_configs):
                 config_name = f"config_{j}"
-                if layers is None:
+                if cfg is None:
                     config_name = "no_hidden"
-                elif layers == [-1]:
+                elif cfg.get("last_layer_only"):
                     config_name = "last_layer"
-                elif len(layers) == 3:
-                    config_name = "last_3_layers"
-                else:
-                    config_name = f"layers_{layers[0]}_to_{layers[-1]}"
+                elif cfg.get("all_layers"):
+                    config_name = "all_layers"
                 
                 print(f"  Testing {config_name}...")
                 
-                if layers is None:
+                if cfg is None:
                     result = self.benchmark_generation(model, prompt, None)
                 else:
                     compression_results = self.benchmark_compression_modes(
-                        model, prompt, layers
+                        model, prompt, cfg
                     )
                     result = compression_results
                 
@@ -430,32 +482,65 @@ class HiddenStatesBenchmark:
                             memory_usage.append(mode_result.memory_overhead_mb)
                             hidden_sizes.append(mode_result.hidden_state_size_mb or 0)
         
+        # Only plot if we have actual data
+        if not configs or not tokens_per_sec:
+            print("No benchmark data available to plot.")
+            return
+        
         # Create subplots
         fig, ((ax1, ax2), (ax3, ax4), (ax5, ax6)) = plt.subplots(3, 2, figsize=(16, 18))
         
         # Tokens per second comparison
-        ax1.bar(range(len(configs)), tokens_per_sec)
-        ax1.set_title('Tokens per Second by Configuration')
-        ax1.set_ylabel('Tokens/sec')
-        ax1.tick_params(axis='x', rotation=45)
+        bars1 = ax1.bar(range(len(configs)), tokens_per_sec, color='skyblue', alpha=0.7)
+        ax1.set_title('Tokens per Second by Configuration', fontsize=14, fontweight='bold')
+        ax1.set_ylabel('Tokens/sec', fontsize=12)
+        ax1.set_xticks(range(len(configs)))
+        ax1.set_xticklabels([c.replace('_', '\n') for c in configs], rotation=45, ha='right')
+        ax1.grid(axis='y', alpha=0.3)
+        
+        # Add value labels on bars
+        for bar, value in zip(bars1, tokens_per_sec):
+            ax1.text(bar.get_x() + bar.get_width()/2, bar.get_height() + 0.1, 
+                    f'{value:.1f}', ha='center', va='bottom', fontsize=10)
         
         # Memory overhead comparison
-        ax2.bar(range(len(configs)), memory_usage)
-        ax2.set_title('Memory Overhead by Configuration')
-        ax2.set_ylabel('Memory (MB)')
-        ax2.tick_params(axis='x', rotation=45)
+        bars2 = ax2.bar(range(len(configs)), memory_usage, color='lightcoral', alpha=0.7)
+        ax2.set_title('Memory Overhead by Configuration', fontsize=14, fontweight='bold')
+        ax2.set_ylabel('Memory (MB)', fontsize=12)
+        ax2.set_xticks(range(len(configs)))
+        ax2.set_xticklabels([c.replace('_', '\n') for c in configs], rotation=45, ha='right')
+        ax2.grid(axis='y', alpha=0.3)
+        
+        # Add value labels
+        for bar, value in zip(bars2, memory_usage):
+            ax2.text(bar.get_x() + bar.get_width()/2, bar.get_height() + 5, 
+                    f'{value:.0f}', ha='center', va='bottom', fontsize=10)
         
         # Hidden state sizes
-        ax3.bar(range(len(configs)), hidden_sizes)
-        ax3.set_title('Hidden State Size by Configuration')
-        ax3.set_ylabel('Size (MB)')
-        ax3.tick_params(axis='x', rotation=45)
+        bars3 = ax3.bar(range(len(configs)), hidden_sizes, color='lightgreen', alpha=0.7)
+        ax3.set_title('Hidden State Size by Configuration', fontsize=14, fontweight='bold')
+        ax3.set_ylabel('Size (MB)', fontsize=12)
+        ax3.set_xticks(range(len(configs)))
+        ax3.set_xticklabels([c.replace('_', '\n') for c in configs], rotation=45, ha='right')
+        ax3.grid(axis='y', alpha=0.3)
+        
+        # Add value labels
+        for bar, value in zip(bars3, hidden_sizes):
+            if value > 0:
+                ax3.text(bar.get_x() + bar.get_width()/2, bar.get_height() + 0.5, 
+                        f'{value:.1f}', ha='center', va='bottom', fontsize=10)
         
         # Performance vs Memory scatter
-        ax4.scatter(memory_usage, tokens_per_sec, s=60, alpha=0.7)
-        ax4.set_xlabel('Memory Overhead (MB)')
-        ax4.set_ylabel('Tokens per Second')
-        ax4.set_title('Performance vs Memory Trade-off')
+        scatter = ax4.scatter(memory_usage, tokens_per_sec, s=100, alpha=0.7, c=hidden_sizes, 
+                            cmap='viridis', edgecolors='black', linewidth=0.5)
+        ax4.set_xlabel('Memory Overhead (MB)', fontsize=12)
+        ax4.set_ylabel('Tokens per Second', fontsize=12)
+        ax4.set_title('Performance vs Memory Trade-off', fontsize=14, fontweight='bold')
+        ax4.grid(True, alpha=0.3)
+        
+        # Add colorbar for hidden state sizes
+        cbar = plt.colorbar(scatter, ax=ax4)
+        cbar.set_label('Hidden State Size (MB)', fontsize=10)
         
         # VRAM usage comparison (if available)
         vram_usage = []
@@ -492,9 +577,13 @@ class HiddenStatesBenchmark:
             ax6.text(0.5, 0.5, 'No concurrency data', ha='center', va='center', transform=ax6.transAxes)
             ax6.set_title('Concurrency Scaling (Not Available)')
         
-        plt.tight_layout()
-        plt.savefig(Path(output_dir) / 'benchmark_analysis.png', dpi=300, bbox_inches='tight')
+        plt.tight_layout(pad=3.0)
+        output_path = Path(output_dir) / 'benchmark_analysis.png'
+        plt.savefig(output_path, dpi=300, bbox_inches='tight', facecolor='white')
         plt.close()
+        
+        print(f"Generated visualization: {output_path}")
+        print(f"Plot contains {len(configs)} configurations with meaningful data")
 
 def main():
     """Main benchmark execution."""
@@ -524,8 +613,10 @@ def main():
     
     # Run comprehensive benchmark
     try:
+        import os
+        model_name = os.getenv("OLLAMA_MODEL", "llama3.2:latest")
         results = benchmark.run_comprehensive_benchmark(
-            model="llama3.2:3b",  # Adjust model name as needed
+            model=model_name,  # Use available model or override via OLLAMA_MODEL
             test_prompts=test_prompts
         )
     except Exception as e:
