@@ -36,6 +36,7 @@ import (
 	"github.com/ollama/ollama/llm"
 	"github.com/ollama/ollama/logutil"
 	"github.com/ollama/ollama/openai"
+	"github.com/ollama/ollama/parser"
 	"github.com/ollama/ollama/server/internal/client/ollama"
 	"github.com/ollama/ollama/server/internal/registry"
 	"github.com/ollama/ollama/template"
@@ -196,6 +197,12 @@ func (s *Server) GenerateHandler(c *gin.Context) {
 	}
 
 	useHarmony := harmony.ShouldUseHarmony(m.Config.ModelFamily, m.Template) && !req.Raw
+	var parserType parser.TokenParserType
+	if useHarmony {
+		parserType = parser.TokenParserTypeHarmony
+	} else {
+		parserType = parser.TokenParserTypeDefault
+	}
 	var functionNameMap *harmony.FunctionNameMap
 
 	if useHarmony {
@@ -348,6 +355,7 @@ func (s *Server) GenerateHandler(c *gin.Context) {
 			Format:       req.Format,
 			Options:      opts,
 			UseHarmony:   useHarmony,
+			ParserType:   parserType,
 			ExposeHidden: req.ExposeHidden,
 		}, func(cr llm.CompletionResponse) {
 			res := api.GenerateResponse{
@@ -1594,6 +1602,12 @@ func (s *Server) ChatHandler(c *gin.Context) {
 	msgs = filterThinkTags(msgs, m)
 
 	useHarmony := harmony.ShouldUseHarmony(m.Config.ModelFamily, m.Template)
+	var parserType parser.TokenParserType
+	if useHarmony {
+		parserType = parser.TokenParserTypeHarmony
+	} else {
+		parserType = parser.TokenParserTypeDefault
+	}
 
 	processedTools := req.Tools
 	var functionNameMap *harmony.FunctionNameMap
@@ -1664,7 +1678,7 @@ func (s *Server) ChatHandler(c *gin.Context) {
 			Images:        images,
 			Format:        req.Format,
 			Options:       opts,
-			UseHarmony:    useHarmony,
+			ParserType:    parserType,
 			PrefillString: prefillString,
 			ExposeHidden:  req.ExposeHidden,
 		}, func(r llm.CompletionResponse) {

@@ -35,6 +35,7 @@ import (
 	"github.com/ollama/ollama/logutil"
 	"github.com/ollama/ollama/ml"
 	"github.com/ollama/ollama/model"
+	"github.com/ollama/ollama/parser"
 )
 
 type filteredEnv []string
@@ -1350,7 +1351,7 @@ type CompletionRequest struct {
 	Options *api.Options
 
 	Grammar       string // set before sending the request to the subprocess
-	UseHarmony    bool
+	ParserType    parser.TokenParserType
 	PrefillString string
 	
 	// ExposeHidden controls whether to capture and return hidden states
@@ -1367,8 +1368,6 @@ const (
 	DoneReasonLength
 	// DoneReasonConnectionClosed indicates the completion stopped due to the connection being closed
 	DoneReasonConnectionClosed
-	// DoneReasonTokenRepeatLimit indicates the completion stopped due to a token repeat limit
-	DoneReasonTokenRepeatLimit
 )
 
 func (d DoneReason) String() string {
@@ -1377,8 +1376,6 @@ func (d DoneReason) String() string {
 		return "length"
 	case DoneReasonStop:
 		return "stop"
-	case DoneReasonTokenRepeatLimit:
-		return "token_repeat_limit"
 	default:
 		return "" // closed
 	}
